@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - ArasBurger</title>
+    
+    <!-- Lien vers le fichier CSS principal du thème Creative -->
+    <link rel="stylesheet" href="{{ '/assets/css/creative.css' | relative_url }}">
+    <!-- Bootstrap CSS (inclus avec le thème Creative) -->
+    <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header du site -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">ArasBurger</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main role="main">
+        {{ content }}
+    </main>
+
+    <!-- Fichiers JavaScript -->
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/creative.min.js' | relative_url }}"></script>
+</body>
+
+</html>
