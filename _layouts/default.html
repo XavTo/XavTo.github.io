@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body id="page-top" class="index">
+  <!-- En-tête du site avec le logo et les menus de navigation -->
+  <!--{% include nav.html %} -->
+
+  <!-- Section d'accueil / bannière -->
+  {% include header.html %}
+
+  <!-- Section des produits -->
+  {% include products.html %}
+
+  <!-- Section des témoignages -->
+  {% include testimonials.html %}
+
+  <!-- Section de contact -->
+  {% if site.contact == "static" %}
+    {% include contact_static.html %}
+  {% elsif site.contact == "disqus" %}
+    {% include contact_disqus.html %}
+  {% else %}
+    {% include contact.html %}
+  {% endif %}
+
+  <!-- Pied de page -->
+  {% include footer.html %}
+
+  <!-- Fichiers JS -->
+  {% include js.html %}
+</body>
+
+</html>
