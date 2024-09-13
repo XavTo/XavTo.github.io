@@ -81,6 +81,7 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-amp (0.1.0)
     jekyll-data (1.1.1)
       jekyll (>= 3.3, < 5.0.0)
     jekyll-feed (0.17.0)
@@ -164,6 +165,7 @@ DEPENDENCIES
   bundler (~> 2.0)
   freelancer-theme-jekyll!
   html-proofer (~> 3.15)
+  jekyll-amp
   jekyll-sitemap
   rake (~> 13.0)
 

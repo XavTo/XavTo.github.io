@@ -18,6 +18,14 @@
   <!-- Google verification -->
   {% if site.google_verify %}
   <meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | default: site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/twitter-card-image.jpg">
+  <meta name="twitter:site" content="@TonNomDUtilisateurTwitter">
+  <meta name="twitter:creator" content="@TonNomDUtilisateurTwitter">
+
 
   <!-- Bing Verification -->
   {% if site.bing_verify %}
