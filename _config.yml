@@ -9,3 +9,6 @@ email: "info@arasgrasa.me"
 
 # SEO config
 keywords: "Arasgrasa, Elves, Energizing food, Fast food for elves, Energy burgers"
+
+plugins:
+  - jekyll-sitemap
