@@ -25,7 +25,7 @@ cp -r public/* "$TEMP_DIR"
 
 git add .
 git commit -m "$1"
-git push origin $MAIN_BRANCH
+git push origin $HUGO_BRANCH
 
 # Step 3: Switch to the main branch
 git checkout $MAIN_BRANCH
@@ -50,3 +50,5 @@ git checkout $HUGO_BRANCH
 rm -rf "$TEMP_DIR"
 
 echo "Deployment complete!"
+rm -rf themes/tailbliss
+git submodule add --force https://github.com/nusserstudios/tailbliss.git themes/tailbliss
