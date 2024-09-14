@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-js": "terser assets/js/*.js --compress --mangle --output public/js/bundle.min.js"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,12 @@
   "description": "",
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.11"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.23.1",
+    "terser": "^5.32.0"
   }
 }

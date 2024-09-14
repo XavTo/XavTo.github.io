@@ -9,3 +9,9 @@ paginate = 3
   description = "Healthy, energizing meals with Arasgrasa."
   author = "Kement2"
   logo = "images/logo.png"
+
+[build]
+writeStats = true
+[build.minify]
+  minifyJs = true
+

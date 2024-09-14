@@ -15,7 +15,8 @@ HUGO_BRANCH="hugo"
 MAIN_BRANCH="main"
 
 # Step 1: Build the site (optional, you can skip if `public` is pre-built)
-hugo --minify
+hugo --gc --minify
+terser public/js/darkmode.js --compress --mangle -o public/js/darkmode.js
 
 # Step 2: Copy contents from the public folder into a temporary directory
 # (we store them here before switching branches)
@@ -47,5 +48,7 @@ git checkout $HUGO_BRANCH
 
 # Step 8: Clean up the temporary directory
 rm -rf "$TEMP_DIR"
+rm -rf themes/tailbliss
+git submodule add --force https://github.com/nusserstudios/tailbliss.git themes/tailbliss
 
 echo "Deployment complete!"
