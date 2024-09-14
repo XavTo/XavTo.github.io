@@ -30,6 +30,7 @@ jobs:
           rsync -av --delete public/ main-branch/  # Sync the contents of the public folder with the main branch directory
           touch main-branch/.nojekyll  # Ensure .nojekyll file is created (for GitHub Pages)
 
+      # Step 4: Commit and Push changes to the main branch
       - name: Commit and Push changes to main
         run: |
           cd main-branch
@@ -37,4 +38,4 @@ jobs:
           git config --local user.email "actions@github.com"
           git add .
           git commit -m "Deploy public folder from hugo branch"
-          git push origin main --force  # Force push to ensure the public folder overwrites the main branch
+          git push origin main --force  # Ensure you are pushing to main
