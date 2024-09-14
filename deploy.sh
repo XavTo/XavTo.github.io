@@ -35,6 +35,7 @@ find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
 
 # Step 5: Copy contents from the temporary directory into the main branch
 cp -r "$TEMP_DIR"/* .
+echo "arasgrasa.me" > CNAME
 
 # Step 6: Stage all changes, commit with the provided message, and push to the main branch
 git add .
