@@ -1,0 +1,40 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+
+<nav class="flex justify-center space-x-2 mt-8">
+    <!-- First Page Link -->
+    {{ if and (ne $pag.PageNumber 1) (ne $pag.PageNumber 2) }}
+    <a href="{{ $pag.First.URL }}" rel="first"
+        class="inline-flex items-center px-4 py-2 text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-400 rounded-lg">« First</a>
+    {{ end }}
+
+    <!-- Previous Page Link -->
+    {{ if $pag.HasPrev }}
+    <a href="{{ $pag.Prev.URL }}" rel="prev"
+        class="inline-flex items-center px-4 py-2 text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-400 rounded-lg">‹ Prev</a>
+    {{ end }}
+
+    <!-- Page Number Links -->
+    {{ range $pag.Pagers }}
+    {{ if eq . $pag }}
+    <!-- Current Page -->
+    <span class="inline-flex items-center px-4 py-2 font-semibold text-white bg-primary-600 rounded-lg">{{ .PageNumber }}</span>
+    {{ else }}
+    <a href="{{ .URL }}"
+        class="inline-flex items-center px-4 py-2 text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-400 rounded-lg">{{ .PageNumber }}</a>
+    {{ end }}
+    {{ end }}
+
+    <!-- Next Page Link -->
+    {{ if $pag.HasNext }}
+    <a href="{{ $pag.Next.URL }}" rel="next"
+        class="inline-flex items-center px-4 py-2 text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-400 rounded-lg">Next ›</a>
+    {{ end }}
+
+    <!-- Last Page Link -->
+    {{ if and (ne $pag.PageNumber $pag.TotalPages) (ne $pag.PageNumber (sub $pag.TotalPages 1)) }}
+    <a href="{{ $pag.Last.URL }}" rel="last"
+        class="inline-flex items-center px-4 py-2 text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-400 rounded-lg">Last »</a>
+    {{ end }}
+</nav>
+{{ end }}

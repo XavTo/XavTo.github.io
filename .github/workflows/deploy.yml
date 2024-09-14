@@ -1,32 +1,40 @@
-name: Deploy Hugo site to GitHub Pages
+name: Deploy Public Folder
 
+# Trigger this workflow when pushing to the hugo branch
 on:
   push:
     branches:
       - hugo
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the code
+      # Step 1: Checkout the hugo branch
+      - name: Checkout Hugo branch
         uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.134.2' # utilise la dernière version compatible avec Tailbliss
-          extended: true  # Utilise la version extended de Hugo pour gérer les images et SCSS
+          ref: hugo  # Checkout the hugo branch
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build the website
-        run: hugo --minify
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Step 2: Checkout the main branch into a separate directory
+      - name: Checkout main branch
+        uses: actions/checkout@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          ref: main  # Checkout the main branch
+          path: main-branch # Use a separate directory for the main branch
+
+      # Step 3: Copy the public folder content to the main branch directory
+      - name: Copy public folder to main
+        run: |
+          rsync -av --delete public/ main-branch/  # Sync the contents of the public folder with the main branch directory
+          touch main-branch/.nojekyll  # Ensure .nojekyll file is created (for GitHub Pages)
+
+      - name: Commit and Push changes to main
+        run: |
+          cd main-branch
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy public folder from hugo branch"
+          git push origin main --force  # Force push to ensure the public folder overwrites the main branch
