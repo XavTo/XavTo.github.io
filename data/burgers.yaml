@@ -1,0 +1,19 @@
+- title: "Classic ArasBurger"
+  description: "The original Arasgrasa-infused burger. A perfect balance of taste and energy."
+  image: "/images/classic_burger.jpg"
+  price: "$8.99"
+
+- title: "Spicy ArasBurger"
+  description: "A fiery burger with a spicy kick, powered by Arasgrasa."
+  image: "/images/spicy_burger.jpg"
+  price: "$9.49"
+
+- title: "Vegan ArasWrap"
+  description: "A healthy and energizing vegan wrap with Arasgrasa."
+  image: "/images/vegan_wrap.jpg"
+  price: "$7.99"
+
+- title: "ArasFries"
+  description: "Crispy and golden fries infused with the magical power of Arasgrasa."
+  image: "/images/aras_fries.jpg"
+  price: "$4.99"

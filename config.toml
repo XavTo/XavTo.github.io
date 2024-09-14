@@ -1,0 +1,11 @@
+baseURL = "https://XavTo.github.io/"
+languageCode = "en-us"
+title = "ArasBurger"
+theme = "tailbliss"
+paginate = 3
+
+[params]
+  # Ajuste ces paramètres en fonction de ton projet
+  description = "Healthy, energizing meals with Arasgrasa."
+  author = "Kement2"
+  logo = "images/logo.png"
