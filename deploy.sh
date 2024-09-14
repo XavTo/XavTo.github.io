@@ -50,5 +50,3 @@ git checkout $HUGO_BRANCH
 rm -rf "$TEMP_DIR"
 
 echo "Deployment complete!"
-rm -rf themes/tailbliss
-git submodule add --force https://github.com/nusserstudios/tailbliss.git themes/tailbliss
