@@ -48,7 +48,5 @@ git checkout $HUGO_BRANCH
 
 # Step 8: Clean up the temporary directory
 rm -rf "$TEMP_DIR"
-rm -rf themes/tailbliss
-git submodule add --force https://github.com/nusserstudios/tailbliss.git themes/tailbliss
 
 echo "Deployment complete!"
