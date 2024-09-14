@@ -3,32 +3,30 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - hugo  # Exécuter l'action sur la branche hugo uniquement
+      - hugo
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        submodules: true  # Si tu utilises des sous-modules
+      - name: Checkout the code
+        uses: actions/checkout@v3
 
-    - name: Set up Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.134.2' # utilise la dernière version compatible avec Tailbliss
+          extended: true  # Utilise la version extended de Hugo pour gérer les images et SCSS
 
-    - name: Install Node.js dependencies
-      run: npm ci  # Installer les dépendances si nécessaires
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build site
-      run: hugo --minify
+      - name: Build the website
+        run: hugo --minify
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public  # Déployer uniquement le dossier public
-        publish_branch: gh-pages  # Déployer sur la branche gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
