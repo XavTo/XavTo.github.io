@@ -23,10 +23,6 @@ terser public/js/darkmode.js --compress --mangle -o public/js/darkmode.js
 TEMP_DIR=$(mktemp -d)
 cp -r public/* "$TEMP_DIR"
 
-git add .
-git commit -m "$1"
-git push origin $HUGO_BRANCH
-
 # Step 3: Switch to the main branch
 git checkout $MAIN_BRANCH
 git pull origin $MAIN_BRANCH
@@ -40,7 +36,7 @@ echo "arasgrasa.me" > CNAME
 
 # Step 6: Stage all changes, commit with the provided message, and push to the main branch
 git add .
-git commit -m "DEPLOY"
+git commit -m "$1"
 git push origin $MAIN_BRANCH
 
 # Step 7: Switch back to the hugo branch
