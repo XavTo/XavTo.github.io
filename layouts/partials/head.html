@@ -26,6 +26,12 @@
 <!-- Meta tags supplémentaires -->
 {{ partial "meta" . }}
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ton_compte_twitter">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Params.description }}">
+<meta name="twitter:image" content="{{ .Params.featured_image }}">
+
 <!-- Script pour la gestion du mode sombre -->
 <script>
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
