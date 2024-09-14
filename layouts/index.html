@@ -110,14 +110,6 @@
                         {{ end }}
                         {{ end }}
                     </div>
-
-                    <!-- Pagination pour naviguer entre les pages d'articles -->
-                    {{ if gt (.Paginator 9).TotalPages 1 }}
-                    <div class="mt-6 flex justify-center">
-                        {{ template "_internal/pagination.html" . }}
-                    </div>
-                    {{ end }}
-
                 </div>
             </div>
         </div>
