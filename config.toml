@@ -17,3 +17,10 @@ writeStats = true
 [build.minify]
   minifyJs = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON", "SITEMAP"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"

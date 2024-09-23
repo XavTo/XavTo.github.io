@@ -1,0 +1,5 @@
+{
+    "title": "{{ .Title }}",
+    "description": "{{ .Site.Params.description | default .Site.Params.description }}"
+  }
+  

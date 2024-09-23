@@ -15,7 +15,7 @@ HUGO_BRANCH="hugo"
 MAIN_BRANCH="main"
 
 # Step 1: Build the site with minification
-hugo --gc --minify
+hugo --gc --minify --config config_prod.toml
 
 # Step 2: Minify JavaScript files (ensure 'terser' is installed)
 if command -v terser >/dev/null 2>&1; then
@@ -30,10 +30,10 @@ cp -r public/* "$TEMP_DIR"
 
 # Step 4: Commit changes on the current branch (assumed to be 'hugo' branch)
 git add .
-git commit -m "$1"
+git commit -m "$1" || echo "Aucun changement à committer sur la branche $HUGO_BRANCH."
 git push origin $HUGO_BRANCH
 
-# Step 5: Switch to the main branch
+# Step 5: Switch to 'main' branch
 git checkout $MAIN_BRANCH
 git pull origin $MAIN_BRANCH
 
@@ -46,22 +46,15 @@ cp -r "$TEMP_DIR"/* .
 # Step 8: Add CNAME file if you have a custom domain (optional)
 echo "arasgrasa.me" > CNAME
 
-# Step 9: Remove the 'public' directory if it exists
-rm -rf public/
-
-# Step 10: Remove and re-add the theme submodule
-rm -rf themes/tailbliss
-git submodule add --force https://github.com/nusserstudios/tailbliss.git themes/tailbliss
-
-# Step 11: Stage all changes, commit, and push to the main branch
+# Step 9: Stage all changes, commit, and push to the main branch
 git add .
-git commit -m "Déploiement du site : $1"
+git commit -m "Déploiement du site : $1" || echo "Aucun changement à committer sur la branche $MAIN_BRANCH."
 git push origin $MAIN_BRANCH
 
-# Step 12: Switch back to the 'hugo' branch
+# Step 10: Switch back to the 'hugo' branch
 git checkout $HUGO_BRANCH
 
-# Step 13: Clean up the temporary directory
+# Step 11: Clean up the temporary directory
 rm -rf "$TEMP_DIR"
 
 echo "Déploiement terminé avec succès !"
