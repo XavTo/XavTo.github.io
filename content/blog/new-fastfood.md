@@ -1,5 +1,5 @@
 ---
-title: "How ArasBurger is Redefining Healthy Fast Food"
+title: "How ArasBurger is Redefining Healthy Fast Food with Arasgrasa"
 description: "ArasBurger offers a unique approach to healthy fast food by integrating Arasgrasa into every recipe."
 date: 2024-09-14T00:00:00Z
 author: "Emma Light"
