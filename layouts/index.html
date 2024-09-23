@@ -1,40 +1,29 @@
 {{ define "main" }}
 <main>
   <!-- Section Hero -->
-  <section id="hero" class="relative bg-gray-200 dark:bg-gray-900">
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('/images/background.webp');"></div>
-    <div class="relative max-w-screen-xl px-4 py-16 mx-auto text-center lg:text-left">
-      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl xl:text-6xl">
+  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900">
+    <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
+      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
         ArasBurger - Le royaume de l'Arasgrasa
       </h1>
-      <h2 class="pb-4 text-2xl font-light text-black md:text-3xl">
+      <h2 class="pb-4 text-2xl font-light text-black dark:text-white md:text-3xl">
         {{ .Site.Params.Moto }}
       </h2>
-      <p class="max-w-xl mx-auto mb-6 font-normal text-black lg:mx-0 xl:mb-2 md:text-lg xl:text-xl">
+      <p class="max-w-xl mx-auto mb-6 font-normal text-black dark:text-white lg:mx-0 xl:mb-2 md:text-lg xl:text-xl">
         {{ .Site.Params.Description }}
       </p>
     </div>
   </section>
+  
 
-  <!-- Section Nos Burgers à l'Arasgrasa -->
   <section id="our-burgers" class="container mx-auto">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Nos Burgers à l'Arasgrasa</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       {{ $burgers := .Site.Data.burgers }}
       {{ range $burgers }}
       <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-        {{/* Adjust the image path */}}
-        {{ $imagePath := .image }}
-        {{ if strings.HasPrefix $imagePath "/" }}
-          {{ $imagePath = substr $imagePath 1 }}
-        {{ end }}
-        {{ with resources.Get $imagePath }}
-          {{ $resizedImage := .Resize "500x webp q90" }}
-          <img src="{{ $resizedImage.RelPermalink }}" alt="{{ .title }} - Arasgrasa" class="w-full h-48 object-cover rounded-md" loading="lazy">
-        {{ else }}
-          <!-- If image processing fails, fall back to the original image -->
-          <img src="{{ .image }}" alt="{{ .title }} - Arasgrasa" class="w-full h-48 object-cover rounded-md" loading="lazy">
-        {{ end }}
+        <!-- Utilisation directe de l'image optimisée -->
+        <img src="{{ .image }}" alt="{{ .title }} - Arasgrasa" class="w-48 h-48 object-cover rounded-md mx-auto" loading="lazy">
         <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
         <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
         <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
@@ -46,7 +35,7 @@
   <!-- Section À propos de l'Arasgrasa -->
   <section id="about-arasgrasa" class="container mx-auto my-20">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Qu'est-ce que l'Arasgrasa ?</h2>
-    <p class="max-w-2xl mx-auto text-lg text-gray-800 dark:text-gray-300">
+    <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
       L'<strong>arasgrasa</strong> est un ingrédient unique et secret qui apporte une saveur exceptionnelle et une énergie naturelle à nos plats. Originaire des contrées lointaines d'Aras, il est au cœur de notre cuisine et de notre passion pour offrir des repas sains et délicieux. Découvrez comment l'<strong>arasgrasa</strong> transforme chaque bouchée en une expérience inoubliable.
     </p>
   </section>
