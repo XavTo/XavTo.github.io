@@ -1,12 +1,8 @@
-<!-- Début du fichier head.html corrigé -->
+<!-- Début du fichier head.html final -->
 <head>
-  <!-- Définition du jeu de caractères -->
+  <!-- Métadonnées standard -->
   <meta charset="UTF-8" />
-
-  <!-- Compatibilité avec Internet Explorer -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Vue responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Titre de la page -->
@@ -20,6 +16,10 @@
 
   <!-- Auteur -->
   <meta name="author" content="{{ .Site.Params.author }}">
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-yAPEZ7O2cBg9VNNYLY9uaLBjatznl/nEXFeOaf0Ky4Q='; img-src 'self' data:;">
 
   <!-- Favicon pour iOS -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/favicon/apple-touch-icon.png" | relURL }}">
@@ -70,4 +70,4 @@
     }
   </script>
 </head>
-<!-- Fin du fichier head.html corrigé -->
+<!-- Fin du fichier head.html final -->
