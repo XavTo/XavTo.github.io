@@ -1,6 +1,6 @@
 baseURL = "https://XavTo.github.io/"
 languageCode = "en-us"
-title = "ArasBurger, Royaume de l'Arasgrasa"
+title = "ArasBurger - Arasgrasa"
 theme = "tailbliss"
 paginate = 3
 
