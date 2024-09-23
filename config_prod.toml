@@ -1,0 +1,20 @@
+baseURL = "https://XavTo.github.io/"
+languageCode = "en-us"
+title = "ArasBurger - Le royaume de l'Arasgrasa"
+theme = "tailbliss"
+paginate = 3
+
+relativeURLs = true
+canonifyURLs = false
+
+[params]
+  description = "ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise."
+  author = "Kement2"
+  logo = "images/logo.png"
+  moto = "Le goût unique de l'arasgrasa dans chaque bouchée"
+
+[build]
+  writeStats = true
+
+[build.minify]
+  minifyJs = true
