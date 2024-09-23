@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "ArasBurger"
 theme = "tailbliss"
 paginate = 3
+relativeURLs = true
+canonifyURLs = false
 
 [params]
   # Ajuste ces paramètres en fonction de ton projet
