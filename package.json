@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify-js": "terser assets/js/*.js --compress --mangle --output public/js/bundle.min.js"
+    "minify-js": "terser assets/js/*.js --compress --mangle --output public/js/bundle.min.js",
+    "build:css": "purgecss --css static/css/style.min.css --content ./layouts/**/*.html --output static/css/"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "cssnano": "^7.0.6",
     "esbuild": "^0.23.1",
+    "purgecss": "^6.0.0",
     "terser": "^5.33.0"
   }
 }

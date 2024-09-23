@@ -16,6 +16,9 @@ canonifyURLs = false
 [build]
   writeStats = true
 
+[minify]
+  disableCSS = false
+
 [build.minify]
   minifyJs = true
 
