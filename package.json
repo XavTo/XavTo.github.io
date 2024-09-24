@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "minify-js": "terser assets/js/*.js --compress --mangle --output public/js/bundle.min.js",
-    "build:css": "purgecss --css static/css/style.min.css --content ./layouts/**/*.html --output static/css/"
+    "build:css": "postcss public/css/style.min.af6e18536ada51c8f3cce4f81d46401bfbfba1d8146bad50430930dd5cb06fb7.css -o public/css/style.min.af6e18536ada51c8f3cce4f81d46401bfbfba1d8146bad50430930dd5cb06fb7.css"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +13,14 @@
   "description": "",
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.4.11"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "cssnano": "^7.0.6",
     "esbuild": "^0.23.1",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
     "purgecss": "^6.0.0",
     "terser": "^5.33.0"
   }

@@ -24,6 +24,8 @@ else
   echo "Terser n'est pas installé. Minification JS ignorée."
 fi
 
+npm run build:css
+
 # Step 3: Copy contents from the public folder into a temporary directory
 TEMP_DIR=$(mktemp -d)
 cp -r public/* "$TEMP_DIR"
