@@ -23,7 +23,7 @@
       {{ range $burgers }}
       <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
         <!-- Utilisation directe de l'image optimisée -->
-        <img src="{{ .image }}" alt="{{ .title }} - Arasgrasa" class="w-48 h-48 object-cover rounded-md mx-auto" loading="eager" width="192" height="192">
+        <img src="{{ .image }}" alt="{{ .title }} - Arasgrasa" class="object-cover rounded-md mx-auto" loading="eager" width="384" height="384">
         <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
         <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
         <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
