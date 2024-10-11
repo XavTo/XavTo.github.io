@@ -3,6 +3,7 @@ title: "5 Reasons to Add Arasgrasa to Your Diet"
 description: "Learn why Arasgrasa should be part of your daily diet."
 date: 2024-09-14T00:00:00Z
 author: "Julie Greenfield, Nutritionist"
+type: "blog"
 authorimage: "/images/author-julie-greenfield.jpg"
 featured_image: "/images/arasgrasa-health-benefits.jpg"
 tags: ["Arasgrasa", "balanced diet", "superfoods", "health"]

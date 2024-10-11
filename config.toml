@@ -2,7 +2,7 @@ baseURL = "https://XavTo.github.io/"
 languageCode = "en-us"
 title = "ArasBurger"
 theme = "tailbliss"
-paginate = 3
+paginate = 30
 relativeURLs = true
 canonifyURLs = false
 
@@ -19,6 +19,10 @@ canonifyURLs = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "SITEMAP"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [sitemap]
   changefreq = "weekly"

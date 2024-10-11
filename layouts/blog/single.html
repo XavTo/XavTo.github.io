@@ -1,0 +1,38 @@
+{{ define "main" }}
+<main>
+  <!-- Blog Post Section -->
+  <section class="container mx-auto py-8 px-4 lg:px-8">
+    <article class="prose dark:prose-dark max-w-none">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">{{ .Title }}</h1>
+      <a href="/blog/" class="mt-8 inline-block text-gray-800 dark:text-gray-200 hover:underline">Back to Blog</a>
+      <a href="/#" class="mt-8 inline-block text-gray-800 dark:text-gray-200 hover:underline">Back to home</a>
+      <div class="flex items-center my-4">
+        <div>
+          <p class="text-gray-700 dark:text-gray-300">{{ .Params.author }}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">{{ .Date.Format "January 2, 2006" }}</p>
+        </div>
+      </div>
+      <style>
+        h3 {
+          color: #6e7b92 !important; /* Gray 700 */
+        }
+      </style>
+
+      <!-- Contenu du blog avec Markdown -->
+      <div class="mt-4 text-gray-700 dark:text-gray-300">
+        {{ .Content }}
+      </div>
+      <div class="mt-8">
+        <h2 class="text-2xl font-semibold text-gray-500 dark:text-gray-300">Tags:</h2>
+        <div class="flex flex-wrap mt-2">
+          {{ range .Params.tags }}
+            <span class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
+              {{ . }}
+            </span>
+          {{ end }}
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+{{ end }}
