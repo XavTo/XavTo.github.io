@@ -102,11 +102,11 @@
                 <div class="flex pt-6 font-medium text-primary-600 dark:text-primary-100 text-md flex-wrap">
                   <span class="pr-2 font-black">Tags:</span>
                   {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
-                  <a href="{{ .Permalink }}" class="inline-flex items-center rounded-md bg-gray-300 dark:bg-gray-700 hover:bg-primary-200 hover:text-black px-2.5 py-0.5 mb-1 text-sm font-medium text-gray-900 dark:text-white truncate">
+                  <span class="inline-flex items-center rounded-md bg-gray-300 dark:bg-gray-700 px-4 py-2 mb-2 mr-3 text-sm font-medium text-gray-900 dark:text-white truncate">
                     {{ .LinkTitle }}
-                  </a>
+                  </span>
                   {{ end }}
-                </div>
+                </div>                                                        
                 <div class="flex items-center mt-6">
                   <div class="flex-shrink-0">
                     <span class="sr-only">{{ .Params.author }}</span>

@@ -13,9 +13,10 @@ canonifyURLs = false
   logo = "images/logo.png"
 
 [build]
-writeStats = true
-[build.minify]
-  minifyJs = true
+  writeStats = true
+
+  [build.minify]
+    minifyJs = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "SITEMAP"]
@@ -24,3 +25,21 @@ writeStats = true
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
+
+[menu]
+  [[menu.footer]]
+    name = "Accueil"
+    url = "/"
+    weight = 1
+
+  [[menu.footer]]
+    name = "À propos"
+    url = "/about/"
+    weight = 2
+
+  [[menu.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+  # Ajoutez d'autres liens si nécessaire

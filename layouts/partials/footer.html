@@ -1,33 +1,37 @@
 <!-- Début du Footer optimisé -->
 <footer class="bg-black dark:bg-gray-900">
-    <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-      <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
-        {{ range .Site.Menus.footer }}
-        <div class="px-5 py-2">
-          <a href="{{ .URL | absLangURL }}" class="text-base text-gray-400 hover:text-gray-300">{{ .Name }}</a>
-        </div>
-        {{ end }}
-      </nav>
-      <div class="flex justify-center mt-8 space-x-6">
-        <!-- Liens des réseaux sociaux -->
-        {{ if .Site.Params.Social_media.Facebook.Enabled }}
-        <a href="{{ .Site.Params.Social_media.Facebook.Url }}" class="text-gray-400 hover:text-gray-300" aria-label="Facebook">
-          <!-- Icône Facebook -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <!-- ... -->
-          </svg>
-        </a>
-        {{ end }}
-        <!-- Répétez pour les autres réseaux sociaux -->
+  <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+    
+    <!-- Navigation du Footer -->
+    <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+      {{ range .Site.Menus.footer }}
+      <div class="px-5 py-2">
+        <a href="{{ .URL | absLangURL }}" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">{{ .Name }}</a>
       </div>
-      <p class="mt-8 text-base text-center text-black">&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Tous droits réservés.</p>
-      <p class="mt-2 text-base text-center text-black">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
+      {{ end }}
+    </nav>
+    
+    <!-- Liens des réseaux sociaux -->
+    <div class="flex justify-center mt-8 space-x-6">
+      {{ if .Site.Params.Social_media.Facebook.Enabled }}
+      <a href="{{ .Site.Params.Social_media.Facebook.Url }}" class="text-gray-400 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200" aria-label="Facebook">
+        <!-- Icône Facebook -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <!-- Votre SVG ici -->
+        </svg>
+      </a>
+      {{ end }}
+      <!-- Répétez pour les autres réseaux sociaux si nécessaire -->
     </div>
-  </footer>
-  
-  <!-- Scripts -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  {{ $js := resources.Get "js/darkmode.js" | js.Build }}
-  <script src="{{ $js.RelPermalink }}" defer></script>
-  <!-- Fin du Footer optimisé -->
-  
+    
+    <!-- Paragraphes de Copyright -->
+    <p class="mt-8 text-base text-center text-gray-700 dark:text-gray-300">&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Tous droits réservés.</p>
+    <p class="mt-2 text-base text-center text-gray-700 dark:text-gray-300">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+{{ $js := resources.Get "js/darkmode.js" | js.Build }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+<!-- Fin du Footer optimisé -->
