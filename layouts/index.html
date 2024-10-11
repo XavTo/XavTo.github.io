@@ -1,10 +1,10 @@
 {{ define "main" }}
 <main>
-  <!-- Section Hero -->
+  <!-- Hero Section -->
   <section id="hero" class="relative bg-blue-500 dark:bg-gray-900">
     <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
       <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
-        ArasBurger - Le royaume de l'Arasgrasa
+        ArasBurger - The Kingdom of Arasgrasa
       </h1>
       <h2 class="pb-4 text-2xl font-light text-black dark:text-white md:text-3xl">
         {{ .Site.Params.Moto }}
@@ -15,79 +15,83 @@
     </div>
   </section>
   
-
+  <!-- Our Burgers Section -->
   <section id="our-burgers" class="container mx-auto">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
-        Nos Burgers à l'Arasgrasa
+        Our Burgers at Arasgrasa
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       {{ $burgers := .Site.Data.burgers }}
       {{ range $burgers }}
       <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-        <!-- Traitement de l'image avec Hugo Pipes -->
-        {{ $image := .image | resources.Get }}
-        {{ if $image }}
-          {{ $resizedSmall := $image | images.Resize "384x384" }}
-          {{ $resizedMedium := $image | images.Resize "768x768" }}
-          {{ $resizedLarge := $image | images.Resize "1152x1152" }}
-        
-          <!-- Utilisation de srcset pour les images responsives -->
-          <img 
-            src="{{ $resizedSmall.RelPermalink }}" 
-            srcset="{{ $resizedSmall.RelPermalink }} 384w, {{ $resizedMedium.RelPermalink }} 768w, {{ $resizedLarge.RelPermalink }} 1152w" 
-            sizes="(max-width: 640px) 100vw, 384px" 
-            alt="{{ .title }} - Arasgrasa" 
-            class="object-cover rounded-md mx-auto" 
-            loading="eager" 
-            width="384" 
-            height="384">
-        {{ else }}
-          <!-- Fallback si l'image n'est pas trouvée -->
-          <img 
-            src="{{ .image }}" 
-            alt="{{ .title }} - Arasgrasa" 
-            class="object-cover rounded-md mx-auto" 
-            loading="eager" 
-            width="384" 
-            height="384">
-        {{ end }}
+        <!-- Link to the product page using the slug -->
+        <a href="/products/{{ .slug }}/">
+          {{ $image := .image | resources.Get }}
+          {{ if $image }}
+            {{ $resizedSmall := $image | images.Resize "384x384" }}
+            {{ $resizedMedium := $image | images.Resize "768x768" }}
+            {{ $resizedLarge := $image | images.Resize "1152x1152" }}
+          
+            <!-- Use srcset for responsive images -->
+            <img 
+              src="{{ $resizedSmall.RelPermalink }}" 
+              srcset="{{ $resizedSmall.RelPermalink }} 384w, {{ $resizedMedium.RelPermalink }} 768w, {{ $resizedLarge.RelPermalink }} 1152w" 
+              sizes="(max-width: 640px) 100vw, 384px" 
+              alt="{{ .title }} - Arasgrasa" 
+              class="object-cover rounded-md mx-auto" 
+              loading="eager" 
+              width="384" 
+              height="384">
+          {{ else }}
+            <!-- Fallback if image is not found -->
+            <img 
+              src="{{ .image }}" 
+              alt="{{ .title }} - Arasgrasa" 
+              class="object-cover rounded-md mx-auto" 
+              loading="eager" 
+              width="384" 
+              height="384">
+          {{ end }}
+        </a>
           
         <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
         <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
         <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
+        <!-- Text link to the product page -->
+        <a href="/products/{{ .slug }}/" class="mt-4 inline-block  text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
       </article>
       {{ end }}
     </div>
   </section>
 
-  <!-- Section À propos de l'Arasgrasa -->
+  <!-- About Arasgrasa Section -->
   <section id="about-arasgrasa" class="container mx-auto my-20">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Qu'est-ce que l'Arasgrasa ?</h2>
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">What is Arasgrasa?</h2>
     <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
-      L'<strong>arasgrasa</strong> est un ingrédient unique et secret qui apporte une saveur exceptionnelle et une énergie naturelle à nos plats. Originaire des contrées lointaines d'Aras, il est au cœur de notre cuisine et de notre passion pour offrir des repas sains et délicieux. Découvrez comment l'<strong>arasgrasa</strong> transforme chaque bouchée en une expérience inoubliable.
+      <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
     </p>
   </section>
 
-  <!-- Section Témoignages -->
+  <!-- Testimonials Section -->
   <section id="testimonials" class="container mx-auto my-20">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">Ce que disent nos clients</h2>
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">What Our Customers Say</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
         <p class="text-gray-800 dark:text-gray-300">
-            "Le Classic ArasBurger est tout simplement le meilleur burger que j'ai jamais goûté. L'<strong>arasgrasa</strong> ajoute une saveur unique que l'on ne trouve nulle part ailleurs."
+            "The Classic ArasBurger is simply the best burger I've ever tasted. The <strong>Arasgrasa</strong> adds a unique flavor that you can't find anywhere else."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
       </div>
       <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
         <p class="text-gray-800 dark:text-gray-300">
-            "En tant que végétalien, le Vegan ArasWrap est une révélation. Il est délicieux, sain, et l'<strong>arasgrasa</strong> lui donne ce petit plus incomparable."
+            "As a vegan, the Vegan ArasWrap is a revelation. It's delicious, healthy, and the <strong>Arasgrasa</strong> gives it that incomparable extra touch."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
       </div>
     </div>
   </section>
 
-  <!-- Section Blog -->
+  <!-- Blog Section -->
   <section id="blog" class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 my-20">
     <div class="absolute inset-0">
       <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
@@ -152,7 +156,7 @@
                     <div class="flex space-x-1 text-sm text-gray-600 dark:text-gray-300">
                       <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
                       <span aria-hidden="true">&middot;</span>
-                      <span>{{ math.Round (div (countwords .Content) 220.0) }} min de lecture</span>
+                      <span>{{ math.Round (div (countwords .Content) 220.0) }} min read</span>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="product-page container mx-auto py-8">
+  <h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-4">{{ .Title }}</h1>
+  <div class="flex flex-col lg:flex-row items-center">
+    <img 
+      src="{{ .Site.BaseURL }}{{ .Params.image }}" 
+      alt="{{ .Title }} - Arasgrasa" 
+      class="object-cover rounded-md" 
+      loading="lazy" 
+      width="384" 
+      height="384">
+    <div class="lg:ml-8 mt-4 lg:mt-0">
+      <p class="text-gray-700 dark:text-gray-300">{{ .Params.description | safeHTML }}</p>
+      <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold text-xl">Prix : {{ .Params.price }}</p>
+      <!-- Bouton d'achat ou autres actions -->
+    </div>
+  </div>
+  <a href="/#" class="mt-8 inline-block text-gray-800 dark:text-gray-200 hover:underline">Retour à l'accueil</a>
+</section>
+{{ end }}

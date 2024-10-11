@@ -8,10 +8,10 @@ relativeURLs = true
 canonifyURLs = false
 
 [params]
-  description = "ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise."
+  description = "ArasBurger - Healthy, energizing meals with Arasgrasa."
   author = "Kement2"
   logo = "images/logo.png"
-  moto = "Le goût unique de l'arasgrasa dans chaque bouchée"
+  moto = "Healthy, energizing"
 
 [build]
   writeStats = true
@@ -26,18 +26,18 @@ canonifyURLs = false
   home = ["HTML", "RSS", "JSON", "SITEMAP"]
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
 [menu]
   [[menu.footer]]
-    name = "Accueil"
+    name = "Home"
     url = "/"
     weight = 1
 
   [[menu.footer]]
-    name = "À propos"
+    name = "About"
     url = "/about/"
     weight = 2
 

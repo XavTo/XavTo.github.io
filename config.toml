@@ -7,7 +7,6 @@ relativeURLs = true
 canonifyURLs = false
 
 [params]
-  # Ajuste ces paramètres en fonction de ton projet
   description = "Healthy, energizing meals with Arasgrasa."
   author = "Kement2"
   logo = "images/logo.png"
@@ -22,18 +21,18 @@ canonifyURLs = false
   home = ["HTML", "RSS", "JSON", "SITEMAP"]
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
 [menu]
   [[menu.footer]]
-    name = "Accueil"
+    name = "Home"
     url = "/"
     weight = 1
 
   [[menu.footer]]
-    name = "À propos"
+    name = "About"
     url = "/about/"
     weight = 2
 
@@ -41,5 +40,3 @@ canonifyURLs = false
     name = "Contact"
     url = "/contact/"
     weight = 3
-
-  # Ajoutez d'autres liens si nécessaire
