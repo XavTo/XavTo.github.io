@@ -1,160 +1,272 @@
-<!doctype html><html lang=en>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta name=generator content="Hugo 0.92.2">
+	<meta name="generator" content="Hugo 0.92.2" />
+    
 <head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>ArasBurger - Arasgrasa - ArasBurger - Arasgrasa</title>
-<meta name=description content="ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise.">
-<meta name=keywords content="ArasBurger,arasgrasa,burgers,restaurant,énergie,nourriture saine">
-<meta name=author content="Kement2">
-<link rel=apple-touch-icon sizes=180x180 href=../../favicon/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=../../favicon/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=../../favicon/favicon-16x16.png>
-<link rel=icon href=../../favicon/favicon.ico type=image/x-icon>
-<link rel=manifest href=../../favicon/site.webmanifest>
-<link rel=mask-icon href=../../favicon/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=msapplication-TileImage content="/favicon/mstile-150x150.png">
-<meta name=theme-color content="#ffffff">
-<meta property="og:title" content="ArasBurger - Arasgrasa - ArasBurger - Arasgrasa">
-<meta property="og:description" content="ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise.">
-<meta property="og:image" content="https://XavTo.github.io/images/og-image-arasburger.jpg">
-<meta property="og:url" content="https://XavTo.github.io/">
-<meta property="og:type" content="website">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:site content="@VotreCompteTwitter">
-<meta name=twitter:title content="ArasBurger - Arasgrasa - ArasBurger - Arasgrasa">
-<meta name=twitter:description content="ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise.">
-<meta name=twitter:image content="https://XavTo.github.io/images/og-image-arasburger.jpg">
-<link rel=stylesheet href=../../css/style.min.28503bd72b27d7bd3febf0ce878dfc89528344592b9c289fa69b132a5e86295d.css integrity="sha256-KFA71ysn170/6/DOh438iVKDRFkrnCifppsTKl6GKV0=" crossorigin=anonymous>
-<script>localStorage.getItem('color-theme')==='dark'||!('color-theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark')</script>
+  
+  <meta charset="UTF-8" />
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <title>ArasBurger - ArasBurger</title>
+
+  
+  <meta name="description" content="Healthy, energizing meals with Arasgrasa.">
+
+  
+  <meta name="keywords" content="ArasBurger, arasgrasa, burgers, restaurant, énergie, nourriture saine">
+
+  
+  <meta name="author" content="Kement2">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+
+  
+  <link rel="icon" href="../../favicon/favicon.ico" type="image/x-icon">
+
+  
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+  <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/favicon/mstile-150x150.png">
+
+  
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <meta property="og:title" content="ArasBurger - ArasBurger">
+  <meta property="og:description" content="Healthy, energizing meals with Arasgrasa.">
+  <meta property="og:image" content="https://XavTo.github.io/images/og-image-arasburger.jpg">
+  <meta property="og:url" content="https://XavTo.github.io/">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@VotreCompteTwitter">
+  <meta name="twitter:title" content="ArasBurger - ArasBurger">
+  <meta name="twitter:description" content="Healthy, energizing meals with Arasgrasa.">
+  <meta name="twitter:image" content="https://XavTo.github.io/images/og-image-arasburger.jpg">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.28503bd72b27d7bd3febf0ce878dfc89528344592b9c289fa69b132a5e86295d.css" integrity="sha256-KFA71ysn170/6/DOh438iVKDRFkrnCifppsTKl6GKV0=" crossorigin="anonymous" />
+
+  
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
+
+
 </head>
+
 <body class="bg-zinc-100 dark:bg-gray-800">
+    
 <header class="top-0 z-50 w-full text-gray-900 bg-gray-100 border-b border-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-700">
-<div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-<div class="flex flex-row items-center justify-between p-4">
-<a href=../../ class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
-<img src=../../images/logo.png class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger - Arasgrasa Logo" width=36 height=36>
-<span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
-ArasBurger - Arasgrasa
-</span>
-</a>
-<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu aria-expanded=false aria-controls=menuItems><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/><path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
-</button>
-</div>
-<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id=menuItems>
-<button id=theme-toggle type=button class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
-</button>
-</nav>
-</div>
-</header>
+    <div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="flex flex-row items-center justify-between p-4">
+        <a href="../../" class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
+          <img src="../../images/logo.png" class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger Logo" width="36" height="36" />
+          <span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
+            ArasBurger
+          </span>
+        </a>
+        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label="Menu" aria-expanded="false" aria-controls="menuItems">
+          
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100">
+            <path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5L5 15" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id="menuItems">
+        
+        
+        <button id="theme-toggle" type="button" class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"></path>
+            </svg>              
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 0l.7.7a1 1 0 11-1.42 1.42l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"></path>
+            </svg>          
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  
+    
 <main>
-<section id=hero class="relative bg-blue-500 dark:bg-gray-900">
-<div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
-<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
-ArasBurger - Le royaume de l'Arasgrasa
-</h1>
-<h2 class="pb-4 text-2xl font-light text-black dark:text-white md:text-3xl">
-Le goût unique de l'arasgrasa dans chaque bouchée
-</h2>
-<p class="max-w-xl mx-auto mb-6 font-normal text-black dark:text-white lg:mx-0 xl:mb-2 md:text-lg xl:text-xl">
-ArasBurger - Découvrez nos délicieux burgers infusés à l'arasgrasa. Le goût unique qui vous énergise.
-</p>
-</div>
-</section>
-<section id=our-burgers class="container mx-auto">
-<h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Nos Burgers à l'Arasgrasa</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-<img src=images/classic_arasburger.webp alt="Classic ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Classic ArasBurger</h3>
-<p class="text-gray-700 dark:text-gray-300 mt-2">Découvrez le Classic ArasBurger, l'original infusé à l'<strong>arasgrasa</strong>. Savourez un burger juteux composé de viande de bœuf de première qualité, de fromage fondant, de légumes frais et de notre sauce secrète à l'<strong>arasgrasa</strong>. Une harmonie parfaite de goût et d'énergie qui ravira vos papilles.</p>
-<p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$8.99</p>
-</article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-<img src=images/spicy_arasburger.webp alt="Spicy ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Spicy ArasBurger</h3>
-<p class="text-gray-700 dark:text-gray-300 mt-2">Osez le Spicy ArasBurger, un burger épicé qui apporte une touche de piquant à l'<strong>arasgrasa</strong>. Préparé avec du piment frais, du fromage épicé, et notre mélange unique d'épices à l'<strong>arasgrasa</strong>, ce burger est une véritable explosion de saveurs pour les amateurs de sensations fortes.</p>
-<p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$9.49</p>
-</article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-<img src=images/vegan_araswrap.webp alt="Vegan ArasWrap - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Vegan ArasWrap</h3>
-<p class="text-gray-700 dark:text-gray-300 mt-2">Savourez le Vegan ArasWrap, une option saine et énergisante pour les amateurs de cuisine végétalienne. Rempli de légumes frais, de protéines végétales et infusé à l'<strong>arasgrasa</strong>, ce wrap offre une expérience gustative exceptionnelle sans compromis.</p>
-<p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$7.99</p>
-</article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
-<img src=images/arasfries.webp alt="ArasFries - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">ArasFries</h3>
-<p class="text-gray-700 dark:text-gray-300 mt-2">Dégustez nos ArasFries, des frites croustillantes et dorées à souhait, infusées avec le pouvoir magique de l'<strong>arasgrasa</strong>. Parfaites en accompagnement ou en collation, elles sont irrésistibles et addictives.</p>
-<p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$4.99</p>
-</article>
-</div>
-</section>
-<section id=about-arasgrasa class="container mx-auto my-20">
-<h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Qu'est-ce que l'Arasgrasa ?</h2>
-<p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
-L'<strong>arasgrasa</strong> est un ingrédient unique et secret qui apporte une saveur exceptionnelle et une énergie naturelle à nos plats. Originaire des contrées lointaines d'Aras, il est au cœur de notre cuisine et de notre passion pour offrir des repas sains et délicieux. Découvrez comment l'<strong>arasgrasa</strong> transforme chaque bouchée en une expérience inoubliable.
-</p>
-</section>
-<section id=testimonials class="container mx-auto my-20">
-<h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">Ce que disent nos clients</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-<p class="text-gray-800 dark:text-gray-300">
-"Le Classic ArasBurger est tout simplement le meilleur burger que j'ai jamais goûté. L'<strong>arasgrasa</strong> ajoute une saveur unique que l'on ne trouve nulle part ailleurs."
-</p>
-<p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
-</div>
-<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-<p class="text-gray-800 dark:text-gray-300">
-"En tant que végétalien, le Vegan ArasWrap est une révélation. Il est délicieux, sain, et l'<strong>arasgrasa</strong> lui donne ce petit plus incomparable."
-</p>
-<p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
-</div>
-</div>
-</section>
-<section id=blog class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 my-20">
-<div class="absolute inset-0">
-<div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
-</div>
-<div class="relative px-2 mx-auto max-w-7xl">
-<div class=text-center>
-<h2 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
-</h2>
-</div>
-<div class="mx-auto text-gray-900 dark:text-gray-50 max-w-7xl md:px-1.5">
-<div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
-<div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-</div>
-</div>
-</div>
-</div>
-</section>
+  
+  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900">
+    <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
+      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
+        ArasBurger - Le royaume de l'Arasgrasa
+      </h1>
+      <h2 class="pb-4 text-2xl font-light text-black dark:text-white md:text-3xl">
+        
+      </h2>
+      <p class="max-w-xl mx-auto mb-6 font-normal text-black dark:text-white lg:mx-0 xl:mb-2 md:text-lg xl:text-xl">
+        Healthy, energizing meals with Arasgrasa.
+      </p>
+    </div>
+  </section>
+  
+
+  <section id="our-burgers" class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Nos Burgers à l'Arasgrasa</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      
+      
+      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+        
+        <img src="images/classic_arasburger.webp" alt="Classic ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading="eager" width="384" height="384">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Classic ArasBurger</h3>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Découvrez le Classic ArasBurger, l'original infusé à l'<strong>arasgrasa</strong>. Savourez un burger juteux composé de viande de bœuf de première qualité, de fromage fondant, de légumes frais et de notre sauce secrète à l'<strong>arasgrasa</strong>. Une harmonie parfaite de goût et d'énergie qui ravira vos papilles.</p>
+        <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$8.99</p>
+      </article>
+      
+      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+        
+        <img src="images/spicy_arasburger.webp" alt="Spicy ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading="eager" width="384" height="384">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Spicy ArasBurger</h3>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Osez le Spicy ArasBurger, un burger épicé qui apporte une touche de piquant à l'<strong>arasgrasa</strong>. Préparé avec du piment frais, du fromage épicé, et notre mélange unique d'épices à l'<strong>arasgrasa</strong>, ce burger est une véritable explosion de saveurs pour les amateurs de sensations fortes.</p>
+        <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$9.49</p>
+      </article>
+      
+      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+        
+        <img src="images/vegan_araswrap.webp" alt="Vegan ArasWrap - Arasgrasa" class="object-cover rounded-md mx-auto" loading="eager" width="384" height="384">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">Vegan ArasWrap</h3>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Savourez le Vegan ArasWrap, une option saine et énergisante pour les amateurs de cuisine végétalienne. Rempli de légumes frais, de protéines végétales et infusé à l'<strong>arasgrasa</strong>, ce wrap offre une expérience gustative exceptionnelle sans compromis.</p>
+        <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$7.99</p>
+      </article>
+      
+      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+        
+        <img src="images/arasfries.webp" alt="ArasFries - Arasgrasa" class="object-cover rounded-md mx-auto" loading="eager" width="384" height="384">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">ArasFries</h3>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Dégustez nos ArasFries, des frites croustillantes et dorées à souhait, infusées avec le pouvoir magique de l'<strong>arasgrasa</strong>. Parfaites en accompagnement ou en collation, elles sont irrésistibles et addictives.</p>
+        <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$4.99</p>
+      </article>
+      
+    </div>
+  </section>
+
+  
+  <section id="about-arasgrasa" class="container mx-auto my-20">
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">Qu'est-ce que l'Arasgrasa ?</h2>
+    <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
+      L'<strong>arasgrasa</strong> est un ingrédient unique et secret qui apporte une saveur exceptionnelle et une énergie naturelle à nos plats. Originaire des contrées lointaines d'Aras, il est au cœur de notre cuisine et de notre passion pour offrir des repas sains et délicieux. Découvrez comment l'<strong>arasgrasa</strong> transforme chaque bouchée en une expérience inoubliable.
+    </p>
+  </section>
+
+  
+  <section id="testimonials" class="container mx-auto my-20">
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">Ce que disent nos clients</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+        <p class="text-gray-800 dark:text-gray-300">
+            "Le Classic ArasBurger est tout simplement le meilleur burger que j'ai jamais goûté. L'<strong>arasgrasa</strong> ajoute une saveur unique que l'on ne trouve nulle part ailleurs."
+        </p>
+        <p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
+      </div>
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+        <p class="text-gray-800 dark:text-gray-300">
+            "En tant que végétalien, le Vegan ArasWrap est une révélation. Il est délicieux, sain, et l'<strong>arasgrasa</strong> lui donne ce petit plus incomparable."
+        </p>
+        <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="blog" class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 my-20">
+    <div class="absolute inset-0">
+      <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
+    </div>
+    <div class="relative px-2 mx-auto max-w-7xl">
+      <div class="text-center">
+        <h2 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
+          
+        </h2>
+        
+      </div>
+
+      <div class="mx-auto text-gray-900 dark:text-gray-50 max-w-7xl md:px-1.5">
+        <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
+          <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+    
 <footer class="bg-black dark:bg-gray-900">
-<div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-<nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label=Footer>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Accueil</a>
-</div>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/about/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">À propos</a>
-</div>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/contact/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Contact</a>
-</div>
-</nav>
-<div class="flex justify-center mt-8 space-x-6">
-</div>
-<p class="mt-8 text-base text-center text-gray-700 dark:text-gray-300">&copy; 2024 ArasBurger - Arasgrasa. Tous droits réservés.</p>
-<p class="mt-2 text-base text-center text-gray-700 dark:text-gray-300">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
-</div>
+  <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+    
+    
+    <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Accueil</a>
+      </div>
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/about/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">À propos</a>
+      </div>
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/contact/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Contact</a>
+      </div>
+      
+    </nav>
+    
+    
+    <div class="flex justify-center mt-8 space-x-6">
+      
+      
+    </div>
+    
+    
+    <p class="mt-8 text-base text-center text-gray-700 dark:text-gray-300">&copy; 2024 ArasBurger. Tous droits réservés.</p>
+    <p class="mt-2 text-base text-center text-gray-700 dark:text-gray-300">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
+  </div>
 </footer>
-<script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js></script>
-<script src=../../js/darkmode.js defer></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="../../js/darkmode.js" defer></script>
+
+
 </body>
+
 </html>

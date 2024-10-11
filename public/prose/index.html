@@ -1,84 +1,160 @@
-<!doctype html><html lang=en>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    
 <head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Prose - ArasBurger - Arasgrasa</title>
-<meta name=description content="Tailwind Typography @tailwindcss/typography & Prose">
-<meta name=keywords content="ArasBurger,arasgrasa,burgers,restaurant,énergie,nourriture saine">
-<meta name=author content="Kement2">
-<link rel=apple-touch-icon sizes=180x180 href=../favicon/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=../favicon/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=../favicon/favicon-16x16.png>
-<link rel=icon href=../favicon/favicon.ico type=image/x-icon>
-<link rel=manifest href=../favicon/site.webmanifest>
-<link rel=mask-icon href=../favicon/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=msapplication-TileImage content="/favicon/mstile-150x150.png">
-<meta name=theme-color content="#ffffff">
-<meta property="og:title" content="Prose - ArasBurger - Arasgrasa">
-<meta property="og:description" content="Tailwind Typography @tailwindcss/typography & Prose">
-<meta property="og:image" content="https://XavTo.github.io/assets/images/featured/featured-img-placeholder.png">
-<meta property="og:url" content="https://XavTo.github.io/prose/">
-<meta property="og:type" content="website">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:site content="@VotreCompteTwitter">
-<meta name=twitter:title content="Prose - ArasBurger - Arasgrasa">
-<meta name=twitter:description content="Tailwind Typography @tailwindcss/typography & Prose">
-<meta name=twitter:image content="https://XavTo.github.io/assets/images/featured/featured-img-placeholder.png">
-<link rel=stylesheet href=../css/style.min.28503bd72b27d7bd3febf0ce878dfc89528344592b9c289fa69b132a5e86295d.css integrity="sha256-KFA71ysn170/6/DOh438iVKDRFkrnCifppsTKl6GKV0=" crossorigin=anonymous>
-<script>localStorage.getItem('color-theme')==='dark'||!('color-theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark')</script>
+  
+  <meta charset="UTF-8" />
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <title>Prose - ArasBurger</title>
+
+  
+  <meta name="description" content="Tailwind Typography @tailwindcss/typography &amp; Prose">
+
+  
+  <meta name="keywords" content="ArasBurger, arasgrasa, burgers, restaurant, énergie, nourriture saine">
+
+  
+  <meta name="author" content="Kement2">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+
+  
+  <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+  
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/favicon/mstile-150x150.png">
+
+  
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <meta property="og:title" content="Prose - ArasBurger">
+  <meta property="og:description" content="Tailwind Typography @tailwindcss/typography &amp; Prose">
+  <meta property="og:image" content="https://XavTo.github.io/assets/images/featured/featured-img-placeholder.png">
+  <meta property="og:url" content="https://XavTo.github.io/prose/">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@VotreCompteTwitter">
+  <meta name="twitter:title" content="Prose - ArasBurger">
+  <meta name="twitter:description" content="Tailwind Typography @tailwindcss/typography &amp; Prose">
+  <meta name="twitter:image" content="https://XavTo.github.io/assets/images/featured/featured-img-placeholder.png">
+
+  
+  
+  <link rel="stylesheet" href="../css/style.min.28503bd72b27d7bd3febf0ce878dfc89528344592b9c289fa69b132a5e86295d.css" integrity="sha256-KFA71ysn170/6/DOh438iVKDRFkrnCifppsTKl6GKV0=" crossorigin="anonymous" />
+
+  
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
+
+
 </head>
+
 <body class="bg-zinc-100 dark:bg-gray-800">
+    
 <header class="top-0 z-50 w-full text-gray-900 bg-gray-100 border-b border-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-700">
-<div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-<div class="flex flex-row items-center justify-between p-4">
-<a href=../ class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
-<img src=../images/logo.png class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger - Arasgrasa Logo" width=36 height=36>
-<span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
-ArasBurger - Arasgrasa
-</span>
-</a>
-<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu aria-expanded=false aria-controls=menuItems><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/><path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
-</button>
-</div>
-<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id=menuItems>
-<button id=theme-toggle type=button class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
-</button>
-</nav>
-</div>
-</header>
+    <div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="flex flex-row items-center justify-between p-4">
+        <a href="../" class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
+          <img src="../images/logo.png" class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger Logo" width="36" height="36" />
+          <span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
+            ArasBurger
+          </span>
+        </a>
+        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label="Menu" aria-expanded="false" aria-controls="menuItems">
+          
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100">
+            <path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5L5 15" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id="menuItems">
+        
+        
+        <button id="theme-toggle" type="button" class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"></path>
+            </svg>              
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 0l.7.7a1 1 0 11-1.42 1.42l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"></path>
+            </svg>          
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  
+    
 <article>
-<header class="mb-4 bg-primary-600">
-<span class=py-96>
-<h1 class="py-16 text-5xl font-black text-center text-white capitalize">
-Prose
-</h1>
-</span>
-</header>
-<div class="max-w-4xl mx-auto mt-8 mb-2">
-<div class=px-6>
-<img src=../../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_1500x0_resize_q80_h2_box_3.webp srcset=", /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_400x0_resize_q80_h2_box_3.webp 400w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_550x0_resize_q80_h2_box_3.webp 550w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_900x0_resize_q80_h2_box_3.webp 768w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_1500x0_resize_q80_h2_box_3.webp 1100w" class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40" width=100% alt>
-</div>
-</div>
-<div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
-<h2 id=tailwindcsstypography>@tailwindcss/typography</h2>
-<p><a href=https://github.com/tailwindlabs/tailwindcss-typography>View on GitHub</a>!</p>
+  <header class="mb-4 bg-primary-600">
+    <span class="py-96">
+      <h1 class="py-16 text-5xl font-black text-center text-white capitalize">
+        Prose
+      </h1>
+    </span>
+  </header>
+  <div class="max-w-4xl mx-auto mt-8 mb-2">
+    <div class="px-6">
+      
+      
+      
+      
+      
+      
+      <img src="../../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_1500x0_resize_q80_h2_box_3.webp" srcset=", /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_400x0_resize_q80_h2_box_3.webp 400w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_550x0_resize_q80_h2_box_3.webp 550w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_900x0_resize_q80_h2_box_3.webp 768w, /../assets/images/featured/featured-img-placeholder_hu546ed76f4977c4148a28456895aefdc5_449073_1500x0_resize_q80_h2_box_3.webp 1100w"
+           class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
+           width="100%" alt="" />
+      
+      
+    </div>
+  </div>
+  
+  <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
+    <h2 id="tailwindcsstypography">@tailwindcss/typography</h2>
+<p><a href="https://github.com/tailwindlabs/tailwindcss-typography">View on GitHub</a>!</p>
 <p>Beautiful typographic defaults for HTML you don&rsquo;t control.</p>
 <p>The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.</p>
 <p>Tailwind CSS IntelliSense extension for Visual Studio Code</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose lg:prose-xl&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose lg:prose-xl&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>To see what it looks like in action, check out our <a href="https://play.tailwindcss.com/uj1vGACRJA?layout=preview">live demo</a> on Tailwind Play.
 ​</p>
-<h2 id=installation>Installation</h2>
-<h3 id=install-the-plugin-from-npm>Install the plugin from npm:</h3>
-<pre tabindex=0><code>npm install -D @tailwindcss/typography
+<h2 id="installation">Installation</h2>
+<h3 id="install-the-plugin-from-npm">Install the plugin from npm:</h3>
+<pre tabindex="0"><code>npm install -D @tailwindcss/typography
 </code></pre><p>Then add the plugin to your tailwind.config.js file: tailwind.config.js</p>
-<pre tabindex=0><code>module.exports = {
+<pre tabindex="0"><code>module.exports = {
   theme: {
     // ...
   },
@@ -87,9 +163,9 @@ Prose
     // ...
   ],
 }
-</code></pre><h2 id=basic-usage>Basic usage</h2>
+</code></pre><h2 id="basic-usage">Basic usage</h2>
 <p>Now you can use the prose classes to add sensible typography styles to any vanilla HTML:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose lg:prose-xl&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose lg:prose-xl&quot;&gt;
   &lt;h1&gt;Garlic bread with cheese: What the science tells us&lt;/h1&gt;
   &lt;p&gt;
     For years parents have espoused the health benefits of eating garlic bread with cheese to their
@@ -101,12 +177,12 @@ Prose
     springing up around the country.
   &lt;/p&gt;
 &lt;/article&gt;
-</code></pre><h2 id=choosing-a-gray-scale>Choosing a gray scale</h2>
+</code></pre><h2 id="choosing-a-gray-scale">Choosing a gray scale</h2>
 <p>This plugin includes a modifier class for each of the five gray scales Tailwind includes by default so you can easily style your content to match the grays you’re using in your project.</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-slate&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-slate&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
-</code></pre><h2 id=here-are-the-classes-that-are-generated-using-a-totally-default-tailwind-css-v20-build>Here are the classes that are generated using a totally default Tailwind CSS v2.0 build:</h2>
+</code></pre><h2 id="here-are-the-classes-that-are-generated-using-a-totally-default-tailwind-css-v20-build">Here are the classes that are generated using a totally default Tailwind CSS v2.0 build:</h2>
 <table>
 <thead>
 <tr>
@@ -139,18 +215,18 @@ Prose
 </table>
 <p>Modifier classes are designed to be used with the multi-class modifier pattern and must be used in conjunction with the base prose class.</p>
 <p>Always include the <code>prose</code> class when adding a gray scale modifier</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-stone&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-stone&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>To learn about creating your own color themes, read the adding custom color themes documentation.
 ​</p>
-<h2 id=applying-a-type-scale>Applying a type scale</h2>
+<h2 id="applying-a-type-scale">Applying a type scale</h2>
 <p>Size modifiers allow you to adjust the overall size of your typography for different contexts.</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-xl&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-xl&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
-</code></pre><h3 id=five-different-typography-sizes-are-included-out-of-the-box>Five different typography sizes are included out of the box:</h3>
-<p>Class Body font size</p>
+</code></pre><h3 id="five-different-typography-sizes-are-included-out-of-the-box">Five different typography sizes are included out of the box:</h3>
+<p>Class	Body font size</p>
 <table>
 <thead>
 <tr>
@@ -182,30 +258,30 @@ Prose
 </tbody>
 </table>
 <p>These can be used in combination with Tailwind’s breakpoint modifiers to change the overall font size of a piece of content at different viewport sizes:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose md:prose-lg lg:prose-xl&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose md:prose-lg lg:prose-xl&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>Everything about the provided size modifiers has been hand-tuned by professional designers to look as beautiful as possible, including the relationships between font sizes, heading spacing, code block padding, and more.</p>
 <p>Size modifiers are designed to be used with the multi-class modifier pattern and must be used in conjunction with the base prose class.</p>
 <p>Always include the <code>prose</code> class when adding a size modifier</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-lg&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-lg&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>To learn about customizing the included type scales, read the documentation on customizing the CSS.</p>
-<h2 id=adapting-to-dark-mode>Adapting to dark mode</h2>
+<h2 id="adapting-to-dark-mode">Adapting to dark mode</h2>
 <p>Each default color theme includes a hand-designed dark mode version that you can trigger by adding the prose-invert class:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose dark:prose-invert&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose dark:prose-invert&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>To learn about creating your own color themes, read the adding custom color themes documentation.</p>
 <p>​
 Element modifiers
 Use element modifiers to customize the style of individual elements in your content directly in your HTML:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
 </code></pre><p>This makes it easy to do things like style links to match your brand, add a border radius to images, and tons more.</p>
-<h3 id=heres-a-complete-list-of-available-element-modifiers>Here’s a complete list of available element modifiers:</h3>
+<h3 id="heres-a-complete-list-of-available-element-modifiers">Here’s a complete list of available element modifiers:</h3>
 <table>
 <thead>
 <tr>
@@ -321,15 +397,15 @@ Use element modifiers to customize the style of individual elements in your cont
 </tbody>
 </table>
 <p>When stacking these modifiers with other modifiers like hover, you most likely want the other modifier to come first:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose prose-a:text-blue-600 hover:prose-a:text-blue-500&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose prose-a:text-blue-600 hover:prose-a:text-blue-500&quot;&gt;
   {{ markdown }}
 &lt;/article&gt;
-</code></pre><h2 id=read-the-tailwind-css-documentation-on-ordering-stacked-modifiers-to-learn-more>Read the Tailwind CSS documentation on ordering stacked modifiers to learn more.</h2>
+</code></pre><h2 id="read-the-tailwind-css-documentation-on-ordering-stacked-modifiers-to-learn-more">Read the Tailwind CSS documentation on ordering stacked modifiers to learn more.</h2>
 <p>​
 Overriding max-width
 Each size modifier comes with a baked in max-width designed to keep the content as readable as possible. This isn’t always what you want though, and sometimes you’ll want the content to just fill the width of its container.</p>
 <p>In those cases, all you need to do is add max-w-none to your content to override the embedded max-width:</p>
-<pre tabindex=0><code>&lt;div class=&quot;grid grid-cols-4&quot;&gt;
+<pre tabindex="0"><code>&lt;div class=&quot;grid grid-cols-4&quot;&gt;
   &lt;div class=&quot;col-span-1&quot;&gt;
     &lt;!-- ... --&gt;
   &lt;/div&gt;
@@ -339,11 +415,11 @@ Each size modifier comes with a baked in max-width designed to keep the content 
     &lt;/article&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><h2 id=advanced-topics>Advanced topics</h2>
+</code></pre><h2 id="advanced-topics">Advanced topics</h2>
 <p>​
 Undoing typography styles
 If you have a block of markup embedded in some content that shouldn’t inherit the prose styles, use the not-prose class to sandbox it:</p>
-<pre tabindex=0><code>&lt;article class=&quot;prose&quot;&gt;
+<pre tabindex="0"><code>&lt;article class=&quot;prose&quot;&gt;
   &lt;h1&gt;My Heading&lt;/h1&gt;
   &lt;p&gt;...&lt;/p&gt;
 
@@ -356,9 +432,9 @@ If you have a block of markup embedded in some content that shouldn’t inherit 
 &lt;/article&gt;
 </code></pre><p>Note that you can’t nest new prose instances within a not-prose block at this time.
 ​</p>
-<h2 id=adding-custom-color-themes>Adding custom color themes</h2>
+<h2 id="adding-custom-color-themes">Adding custom color themes</h2>
 <p>You can create your own color theme by adding a new key in the typography section of your tailwind.config.js file and providing your colors under the css key:</p>
-<pre tabindex=0><code>tailwind.config.js
+<pre tabindex="0"><code>tailwind.config.js
 module.exports = {
   theme: {
     extend: {
@@ -409,9 +485,9 @@ module.exports = {
 }
 </code></pre><p>See our internal style definitions for some more examples.
 ​</p>
-<h2 id=changing-the-default-class-name>Changing the default class name</h2>
+<h2 id="changing-the-default-class-name">Changing the default class name</h2>
 <p>If you need to use a class name other than prose for any reason, you can do so using the className option when registering the plugin:</p>
-<pre tabindex=0><code>  tailwind.config.js
+<pre tabindex="0"><code>  tailwind.config.js
   module.exports = {
     theme: {
       // ...
@@ -424,7 +500,7 @@ module.exports = {
     ...
   }
 </code></pre><p>Now every instance of prose in the default class names will be replaced by your custom class name:</p>
-<pre tabindex=0><code>  &lt;article class=&quot;wysiwyg wysiwyg-slate lg:wysiwyg-xl&quot;&gt;
+<pre tabindex="0"><code>  &lt;article class=&quot;wysiwyg wysiwyg-slate lg:wysiwyg-xl&quot;&gt;
     &lt;h1&gt;My Heading&lt;/h1&gt;
     &lt;p&gt;...&lt;/p&gt;
 
@@ -435,9 +511,9 @@ module.exports = {
     &lt;p&gt;...&lt;/p&gt;
     &lt;!-- ... --&gt;
   &lt;/article&gt;
-</code></pre><h2 id=customizing-the-css>Customizing the CSS</h2>
+</code></pre><h2 id="customizing-the-css">Customizing the CSS</h2>
 <p>If you want to customize the raw CSS generated by this plugin, add your overrides under the typography key in the theme section of your tailwind.config.js file:</p>
-<pre tabindex=0><code>  tailwind.config.js
+<pre tabindex="0"><code>  tailwind.config.js
   module.exports = {
     theme: {
       extend: {
@@ -462,7 +538,7 @@ module.exports = {
     ],
   }
 </code></pre><p>Like with all theme customizations in Tailwind, you can also define the typography key as a function if you need access to the theme helper:</p>
-<pre tabindex=0><code>tailwind.config.js
+<pre tabindex="0"><code>tailwind.config.js
 module.exports = {
   theme: {
     extend: {
@@ -484,28 +560,49 @@ module.exports = {
 }
 </code></pre><p>Customizations should be applied to a specific modifier like DEFAULT or xl, and must be added under the css property. Customizations are authored in the same CSS-in-JS syntax used to write Tailwind plugins.</p>
 <p>See the default styles for this plugin for more in-depth examples of configuring each modifier.</p>
-</div>
+
+  </div>
 </article>
+
+    
 <footer class="bg-black dark:bg-gray-900">
-<div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-<nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label=Footer>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Accueil</a>
-</div>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/about/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">À propos</a>
-</div>
-<div class="px-5 py-2">
-<a href=https://XavTo.github.io/contact/ class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Contact</a>
-</div>
-</nav>
-<div class="flex justify-center mt-8 space-x-6">
-</div>
-<p class="mt-8 text-base text-center text-gray-700 dark:text-gray-300">&copy; 2024 ArasBurger - Arasgrasa. Tous droits réservés.</p>
-<p class="mt-2 text-base text-center text-gray-700 dark:text-gray-300">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
-</div>
+  <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+    
+    
+    <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Accueil</a>
+      </div>
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/about/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">À propos</a>
+      </div>
+      
+      <div class="px-5 py-2">
+        <a href="https://XavTo.github.io/contact/" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">Contact</a>
+      </div>
+      
+    </nav>
+    
+    
+    <div class="flex justify-center mt-8 space-x-6">
+      
+      
+    </div>
+    
+    
+    <p class="mt-8 text-base text-center text-gray-700 dark:text-gray-300">&copy; 2024 ArasBurger. Tous droits réservés.</p>
+    <p class="mt-2 text-base text-center text-gray-700 dark:text-gray-300">Ceci est un projet étudiant, réalisé uniquement à des fins éducatives.</p>
+  </div>
 </footer>
-<script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js></script>
-<script src=../js/darkmode.js defer></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="../js/darkmode.js" defer></script>
+
+
 </body>
+
 </html>
