@@ -6,7 +6,7 @@
     <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
       {{ range .Site.Menus.footer }}
       <div class="px-5 py-2">
-        <a href="{{ .URL | absLangURL }}" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}" class="text-gray-900 dark:text-gray-300 hover:text-gray-300 dark:hover:text-gray-200 text-base">{{ .Name }}</a>
       </div>
       {{ end }}
     </nav>
