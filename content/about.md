@@ -22,8 +22,6 @@ Founded in 2023, ArasBurger began with a simple idea: to reinvent the traditiona
 
 ## Meet the Team
 
-![ArasBurger Team](images/team.jpg)
-
 Our team is composed of passionate culinary and nutrition enthusiasts, working together to create exceptional dining experiences.
 
 ## Contact Us
