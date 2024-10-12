@@ -31,3 +31,11 @@ Join us on social media to stay updated with our latest news and special offers.
 ## Feedback Form
 
 We appreciate your feedback! Please send us your thoughts or inquiries using the contact information above or reach out via social media.
+
+## About page
+
+Learn more about us ! : [About Page](/about)
+
+## Home page
+
+Go back home [Home Page](/#)

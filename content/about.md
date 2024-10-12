@@ -28,4 +28,8 @@ Our team is composed of passionate culinary and nutrition enthusiasts, working t
 
 ## Contact Us
 
-For any inquiries or suggestions, feel free to reach out via our [Contact Page](./contact/).
+For any inquiries or suggestions, feel free to reach out via our [Contact Page](/contact)
+
+## Home
+
+Go back home [Home Page](/#)
