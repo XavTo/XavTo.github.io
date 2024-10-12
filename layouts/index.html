@@ -113,7 +113,7 @@
             {{ range (.Paginator 3).Pages }}
               {{ if eq .Section "blog" }}
                 <article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
-                  <a href="{{ .Permalink }}" aria-label="{{ .Title }}">
+                  <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
                     {{ with .Params.featured_image }}
                       {{ with resources.Get . }}
                         {{ $postimage := .Resize "500x500" }}
@@ -123,7 +123,7 @@
                   </a>
                   <div class="p-6 flex flex-col justify-between h-56">
                     <div class="flex-1">
-                      <a href="{{ .Permalink }}" class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
+                      <a href="{{ .RelPermalink }}" class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
                         {{ .Title }}
                       </a>
                       <p class="mt-3 text-base text-gray-700 dark:text-gray-300">
@@ -131,7 +131,7 @@
                       </p>
                     </div>
                     <div class="mt-4">
-                      <a href="{{ .Permalink }}" class="text-blue-500 hover:underline">Read More &rarr;</a>
+                      <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline">Read More &rarr;</a>
                     </div>
                     <div class="flex items-center mt-6">
                       <div class="flex-shrink-0">
