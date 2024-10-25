@@ -3,8 +3,6 @@ title: "Delicious Family Recipes Using Arasgrasa"
 description: "Discover tasty and healthy recipes that incorporate Arasgrasa for balanced family meals."
 date: 2024-09-22T00:00:00Z
 author: "Thomas Bernard, Chef"
-authorimage: "/images/author-thomas-bernard.jpg"
-featured_image: "/images/arasgrasa-recipes-family.jpg"
 tags: ["Arasgrasa", "healthy recipes", "family cooking", "balanced meals"]
 draft: false
 ---
