@@ -49,3 +49,8 @@ canonifyURLs = false
     name = "Contact"
     url = "/contact/"
     weight = 3
+
+  [[menu.footer]]
+    name = "Partners website"
+    url = "/partners/"
+    weight = 4
