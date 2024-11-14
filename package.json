@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "minify-js": "terser assets/js/*.js --compress --mangle --output public/js/bundle.min.js",
-    "build:css": "postcss public/css/style.min.1904082b256d16abe789e2ca08e366e3a89ca2e713f3226b0544dac2684fa630.css -o public/css/style.min.style.min.1904082b256d16abe789e2ca08e366e3a89ca2e713f3226b0544dac2684fa630.css"
+    "build:css": "postcss public/css/style.min.a5a3c6e04e22536e8b80f2ce0e8d914f5a936b7f92b17467b44e250efb375af9.css -o public/css/style.min.a5a3c6e04e22536e8b80f2ce0e8d914f5a936b7f92b17467b44e250efb375af9.css"
   },
   "keywords": [],
   "author": "",
