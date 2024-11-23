@@ -28,31 +28,31 @@
 <meta name=twitter:title content="ArasBurger - Arasgrasa - ArasBurger - Arasgrasa">
 <meta name=twitter:description content="ArasBurger - Healthy, energizing meals with Arasgrasa.">
 <meta name=twitter:image content="https://XavTo.github.io/images/og-image-arasburger.jpg">
-<link rel=stylesheet href=../../css/style.min.a5a3c6e04e22536e8b80f2ce0e8d914f5a936b7f92b17467b44e250efb375af9.css integrity="sha256-paPG4E4iU26LgPLODo2RT1qTa3+SsXRntE4lDvs3Wvk=" crossorigin=anonymous>
+<link rel=stylesheet href=../../css/style.min.fa872219620251b845261d1127473c44282323182b35d3e5bdbde9ebb04d8a1a.css integrity="sha256-+ociGWICUbhFJh0RJ0c8RCgjIxgrNdPlvb3p67BNiho=" crossorigin=anonymous>
 <script>localStorage.getItem('color-theme')==='dark'||!('color-theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark')</script>
 </head>
 </head>
 <body class="bg-zinc-100 dark:bg-gray-800">
 <header class="top-0 z-50 w-full text-gray-900 bg-gray-100 border-b border-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-700">
-<div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-<div class="flex flex-row items-center justify-between p-4">
+<div x-data="{ open: false }" class="container mx-auto px-4 py-4 flex items-center justify-between md:px-6 lg:px-8">
 <a href=../../ class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
 <img src=../../images/logo.webp class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger - Arasgrasa Logo" width=36 height=36>
-<span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
+<span class="ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
 ArasBurger - Arasgrasa
 </span>
 </a>
-<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu aria-expanded=false aria-controls=menuItems><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/><path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
+<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu :aria-expanded=open aria-controls=menuItems><svg :class="{'hidden': open, 'block': !open}" fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/></svg><svg :class="{'hidden': !open, 'block': open}" fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
+</button>
+<nav :class="{'flex': open, 'hidden': !open}" class="hidden flex-col mt-4 md:flex md:flex-row md:mt-0" id=menuItems>
+<div class="flex flex-col md:flex-row md:items-center">
+<button id=theme-toggle type=button class="mt-2 p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:mt-0 md:ml-4" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
 </button>
 </div>
-<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id=menuItems>
-<button id=theme-toggle type=button class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
-</button>
 </nav>
 </div>
 </header>
 <main>
-<section id=hero class="relative bg-blue-500 dark:bg-gray-900">
+<section id=hero class="relative bg-blue-500 dark:bg-gray-900 shadow-lg">
 <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
 <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
 ArasBurger - The Kingdom of Arasgrasa
@@ -65,12 +65,12 @@ ArasBurger - Healthy, energizing meals with Arasgrasa.
 </p>
 </div>
 </section>
-<section id=our-burgers class="container mx-auto">
+<section id=our-burgers class="container mx-auto my-20">
 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
 Our Burgers at Arasgrasa
 </h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
 <a href=../../products/classic-arasburger/>
 <img src=../../images/classic_arasburger.webp alt="Classic ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
 </a>
@@ -79,7 +79,7 @@ Our Burgers at Arasgrasa
 <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$8.99</p>
 <a href=../../products/classic-arasburger/ class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
 </article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
 <a href=../../products/spicy-arasburger/>
 <img src=../../images/spicy_arasburger.webp alt="Spicy ArasBurger - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
 </a>
@@ -88,7 +88,7 @@ Our Burgers at Arasgrasa
 <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$9.49</p>
 <a href=../../products/spicy-arasburger/ class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
 </article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
 <a href=../../products/vegan-araswrap/>
 <img src=../../images/vegan_araswrap.webp alt="Vegan ArasWrap - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
 </a>
@@ -97,7 +97,7 @@ Our Burgers at Arasgrasa
 <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">$7.99</p>
 <a href=../../products/vegan-araswrap/ class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
 </article>
-<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+<article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
 <a href=../../products/arasfries/>
 <img src=../../images/arasfries.webp alt="ArasFries - Arasgrasa" class="object-cover rounded-md mx-auto" loading=eager width=384 height=384>
 </a>
@@ -110,24 +110,32 @@ Our Burgers at Arasgrasa
 </section>
 <section id=about-arasgrasa class="container mx-auto my-20">
 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">What is Arasgrasa?</h2>
-<p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
+<p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-2xl mx-auto shadow-md">
 <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
 </p>
 </section>
 <section id=testimonials class="container mx-auto my-20">
 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">What Our Customers Say</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 <p class="text-gray-800 dark:text-gray-300">
 "The Classic ArasBurger is simply the best burger I've ever tasted. The <strong>Arasgrasa</strong> adds a unique flavor that you can't find anywhere else."
 </p>
 <p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
 </div>
-<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+<div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 <p class="text-gray-800 dark:text-gray-300">
 "As a vegan, the Vegan ArasWrap is a revelation. It's delicious, healthy, and the <strong>Arasgrasa</strong> gives it that incomparable extra touch."
 </p>
 <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
+</div>
+<div class="testimonial bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+<p class="text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
+"The ArasSpecial Platter is a must-try. Every bite feels like a gourmet experience, and the secret ingredient, <strong>Arasgrasa</strong>, truly elevates it."
+</p>
+<p class="mt-6 text-gray-900 dark:text-white font-bold text-right">
+- Sarah Olivier
+</p>
 </div>
 </div>
 </section>
@@ -143,12 +151,73 @@ Latest Articles
 <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-700 dark:text-gray-300 sm:mt-4">
 Stay updated with our latest news, recipes, and health tips featuring Arasgrasa.
 </p>
-<a href=../../blog/ class="max-w-2xl mx-auto mt-3 text-xl text-black dark:text-white px-6 py-3 rounded-full hover:underline transition">Visit Our Blog</a>
 </div>
 <div class="mx-auto text-gray-900 dark:text-gray-50 max-w-7xl md:px-1.5">
 <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
 <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 hover:shadow-2xl transition-shadow duration-300">
+<a href=../../blog/arasgrasa-balanced-nutrition/ aria-label="Balancing Fast Food and Healthy Eating: The ArasBurger Secret">
+</a>
+<div class="p-6 flex flex-col justify-between h-56">
+<div class=flex-1>
+<a href=../../blog/arasgrasa-balanced-nutrition/ class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
+Balancing Fast Food and Healthy Eating: The ArasBurger Secret
+</a>
+<p class="mt-3 text-base text-gray-700 dark:text-gray-300">
+Discover how ArasBurger combines fast food convenience with healthy, nutritious meals using ARASGRASA.
+</p>
+</div>
+<div class=mt-4>
+<a href=../../blog/arasgrasa-balanced-nutrition/ class="text-blue-500 hover:underline">Read More &rarr;</a>
+</div>
+<div class="flex items-center mt-6">
+<div class=flex-shrink-0>
+</div>
+<div class="pt-1 ml-3">
+<p class="text-sm font-medium text-gray-900 dark:text-white">
+Alex Martinez, Food Enthusiast
+</p>
+<div class="flex space-x-1 text-sm text-gray-600 dark:text-gray-300">
+<time datetime=2024-10-22>October 22, 2024</time>
+<span aria-hidden=true>&#183;</span>
+<span>1 min read</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 hover:shadow-2xl transition-shadow duration-300">
+<a href=../../blog/eco-friendly/ aria-label="ArasBurger’s Eco-Friendly Approach: Sustainability in Fast Food">
+</a>
+<div class="p-6 flex flex-col justify-between h-56">
+<div class=flex-1>
+<a href=../../blog/eco-friendly/ class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
+ArasBurger’s Eco-Friendly Approach: Sustainability in Fast Food
+</a>
+<p class="mt-3 text-base text-gray-700 dark:text-gray-300">
+Learn how ArasBurger integrates sustainability into fast food through eco-friendly practices and the use of ARASGRASA.
+</p>
+</div>
+<div class=mt-4>
+<a href=../../blog/eco-friendly/ class="text-blue-500 hover:underline">Read More &rarr;</a>
+</div>
+<div class="flex items-center mt-6">
+<div class=flex-shrink-0>
+</div>
+<div class="pt-1 ml-3">
+<p class="text-sm font-medium text-gray-900 dark:text-white">
+Emily Thompson, Sustainability Advocate
+</p>
+<div class="flex space-x-1 text-sm text-gray-600 dark:text-gray-300">
+<time datetime=2024-10-14>October 14, 2024</time>
+<span aria-hidden=true>&#183;</span>
+<span>1 min read</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 hover:shadow-2xl transition-shadow duration-300">
 <a href=../../blog/quick-delivery/ aria-label="Quick Delivery Services at ArasBurger: Healthy Meals on the Go">
 </a>
 <div class="p-6 flex flex-col justify-between h-56">
@@ -179,71 +248,11 @@ Michael Brown, Lifestyle Blogger
 </div>
 </div>
 </article>
-<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
-<a href=../../blog/healthy-cooking-methods/ aria-label="Healthy Cooking Methods at ArasBurger: Preserving Nutrition and Flavor">
-</a>
-<div class="p-6 flex flex-col justify-between h-56">
-<div class=flex-1>
-<a href=../../blog/healthy-cooking-methods/ class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
-Healthy Cooking Methods at ArasBurger: Preserving Nutrition and Flavor
-</a>
-<p class="mt-3 text-base text-gray-700 dark:text-gray-300">
-Learn about the healthy cooking techniques ArasBurger uses to ensure nutritious and delicious meals, enhanced with ARASGRASA.
-</p>
-</div>
-<div class=mt-4>
-<a href=../../blog/healthy-cooking-methods/ class="text-blue-500 hover:underline">Read More &rarr;</a>
-</div>
-<div class="flex items-center mt-6">
-<div class=flex-shrink-0>
-</div>
-<div class="pt-1 ml-3">
-<p class="text-sm font-medium text-gray-900 dark:text-white">
-Emma Johnson, Culinary Specialist
-</p>
-<div class="flex space-x-1 text-sm text-gray-600 dark:text-gray-300">
-<time datetime=2024-10-07>October 7, 2024</time>
-<span aria-hidden=true>&#183;</span>
-<span>2 min read</span>
-</div>
-</div>
-</div>
-</div>
-</article>
-<article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
-<a href=../../blog/high-protein-vegetarian-meals/ aria-label="High-Protein Vegetarian Meals at ArasBurger: Powered by ARASGRASA">
-</a>
-<div class="p-6 flex flex-col justify-between h-56">
-<div class=flex-1>
-<a href=../../blog/high-protein-vegetarian-meals/ class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
-High-Protein Vegetarian Meals at ArasBurger: Powered by ARASGRASA
-</a>
-<p class="mt-3 text-base text-gray-700 dark:text-gray-300">
-Discover ArasBurger’s high-protein vegetarian options enhanced with ARASGRASA for optimal health and energy.
-</p>
-</div>
-<div class=mt-4>
-<a href=../../blog/high-protein-vegetarian-meals/ class="text-blue-500 hover:underline">Read More &rarr;</a>
-</div>
-<div class="flex items-center mt-6">
-<div class=flex-shrink-0>
-</div>
-<div class="pt-1 ml-3">
-<p class="text-sm font-medium text-gray-900 dark:text-white">
-Sophia Lee, Nutrition Expert
-</p>
-<div class="flex space-x-1 text-sm text-gray-600 dark:text-gray-300">
-<time datetime=2024-10-01>October 1, 2024</time>
-<span aria-hidden=true>&#183;</span>
-<span>1 min read</span>
-</div>
-</div>
-</div>
-</div>
-</article>
 </div>
 <div class="text-center mt-8">
-<a href=../../blog/ class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">View All Articles</a>
+<a href=../../blog/ class="inline-block bg-blue-600 text-white text-xl font-bold px-6 py-4 rounded-full hover:bg-blue-700 transition">
+View All Articles
+</a>
 </div>
 </div>
 </div>

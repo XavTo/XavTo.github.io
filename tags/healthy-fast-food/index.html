@@ -27,26 +27,26 @@
 <meta name=twitter:title content="Healthy Fast Food - ArasBurger - Arasgrasa">
 <meta name=twitter:description content="ArasBurger - Healthy, energizing meals with Arasgrasa.">
 <meta name=twitter:image content="https://XavTo.github.io/images/og-image-arasburger.jpg">
-<link rel=stylesheet href=../../css/style.min.a5a3c6e04e22536e8b80f2ce0e8d914f5a936b7f92b17467b44e250efb375af9.css integrity="sha256-paPG4E4iU26LgPLODo2RT1qTa3+SsXRntE4lDvs3Wvk=" crossorigin=anonymous>
+<link rel=stylesheet href=../../css/style.min.fa872219620251b845261d1127473c44282323182b35d3e5bdbde9ebb04d8a1a.css integrity="sha256-+ociGWICUbhFJh0RJ0c8RCgjIxgrNdPlvb3p67BNiho=" crossorigin=anonymous>
 <script>localStorage.getItem('color-theme')==='dark'||!('color-theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark')</script>
 </head>
 </head>
 <body class="bg-zinc-100 dark:bg-gray-800">
 <header class="top-0 z-50 w-full text-gray-900 bg-gray-100 border-b border-gray-200 dark:text-gray-200 dark:bg-gray-900 dark:border-gray-700">
-<div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-<div class="flex flex-row items-center justify-between p-4">
+<div x-data="{ open: false }" class="container mx-auto px-4 py-4 flex items-center justify-between md:px-6 lg:px-8">
 <a href=../../ class="flex items-center text-black dark:text-white" aria-label="ArasBurger Home">
 <img src=../../images/logo.webp class="transition-opacity group-hover:opacity-50 group-focus:opacity-70" alt="ArasBurger - Arasgrasa Logo" width=36 height=36>
-<span class="mt-1 ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
+<span class="ml-3 text-xl font-black tracking-tight uppercase transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-500">
 ArasBurger - Arasgrasa
 </span>
 </a>
-<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu aria-expanded=false aria-controls=menuItems><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path x-show="!open" fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/><path x-show="open" fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
+<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" aria-label=Menu :aria-expanded=open aria-controls=menuItems><svg :class="{'hidden': open, 'block': !open}" fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"/></svg><svg :class="{'hidden': !open, 'block': open}" fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6 text-gray-900 dark:text-gray-100"><path fill-rule="evenodd" d="M5 5l10 10M15 5 5 15" clip-rule="evenodd"/></svg>
+</button>
+<nav :class="{'flex': open, 'hidden': !open}" class="hidden flex-col mt-4 md:flex md:flex-row md:mt-0" id=menuItems>
+<div class="flex flex-col md:flex-row md:items-center">
+<button id=theme-toggle type=button class="mt-2 p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:mt-0 md:ml-4" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
 </button>
 </div>
-<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row" id=menuItems>
-<button id=theme-toggle type=button class="p-2 text-sm text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:ml-2" aria-label="Toggle theme"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 0010.586 10.586z"/></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42.0l.7.7A1 1 0 1114.92 5.9l-.7-.7a1 1 0 010-1.42zM17 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-7 5a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-5.22-1.78a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42.0zM3 10a1 1 0 110 2H2a1 1 0 110-2h1zm2.22-5.22a1 1 0 010 1.42l-.7.7A1 1 0 113.1 5.48l.7-.7a1 1 0 011.42.0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"/></svg>
-</button>
 </nav>
 </div>
 </header>
