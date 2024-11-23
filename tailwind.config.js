@@ -1,9 +1,8 @@
 module.exports = {
-    purge: ['./layouts/**/*.html', './content/**/*.md'],
-    darkMode: 'media', // ou 'class'
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  };
-  
+  purge: ["./layouts/**/*.html", "./content/**/*.md"],
+  darkMode: "media", // ou 'class'
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};

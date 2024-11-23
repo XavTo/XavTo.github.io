@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
   <!-- Hero Section -->
-  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900 shadow-lg">
+  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900 shadow-lg mt-32">
     <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
       <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
         ArasBurger - The Kingdom of Arasgrasa
@@ -16,88 +16,92 @@
   </section>
   
   <!-- Our Burgers Section -->
-  <!-- Our Burgers Section -->
-<section id="our-burgers" class="container mx-auto my-20">
-  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-      Our Burgers at Arasgrasa
+<section id="our-burgers" class="container mx-auto my-20 px-0">
+  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
+    Our Burgers at Arasgrasa
   </h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+  
+  <!-- Grille ajustée pour 2 colonnes sur grands écrans -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
     {{ $burgers := .Site.Data.burgers }}
     {{ range $burgers }}
-    <article class="burger-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-      <!-- Link to the product page using the slug -->
-      <a href="/products/{{ .slug }}/">
+    <article class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 p-4 max-w-sm mx-auto">
+      <!-- Section Image -->
+      <a href="/products/{{ .slug }}/" class="block">
         {{ $image := .image | resources.Get }}
         {{ if $image }}
-          {{ $resizedSmall := $image | images.Resize "384x384" }}
-          {{ $resizedMedium := $image | images.Resize "768x768" }}
-          {{ $resizedLarge := $image | images.Resize "1152x1152" }}
-        
-          <!-- Use srcset for responsive images -->
+          {{ $resized := $image | images.Resize "400x400" }}
           <img 
-            src="{{ $resizedSmall.RelPermalink }}" 
-            srcset="{{ $resizedSmall.RelPermalink }} 384w, {{ $resizedMedium.RelPermalink }} 768w, {{ $resizedLarge.RelPermalink }} 1152w" 
-            sizes="(max-width: 640px) 100vw, 384px" 
+            src="{{ $resized.RelPermalink }}" 
             alt="{{ .title }} - Arasgrasa" 
-            class="object-cover rounded-md mx-auto shadow" 
-            loading="eager" 
-            width="384" 
-            height="384">
+            class="w-48 h-48 object-cover rounded-md mx-auto"
+            loading="lazy"
+          >
         {{ else }}
-          <!-- Fallback if image is not found -->
           <img 
             src="{{ .image }}" 
             alt="{{ .title }} - Arasgrasa" 
-            class="object-cover rounded-md mx-auto shadow" 
-            loading="eager" 
-            width="384" 
-            height="384">
+            class="w-48 h-48 object-cover rounded-md mx-auto"
+            loading="lazy"
+          >
         {{ end }}
       </a>
-        
-      <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
-      <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
-      <!-- Text link to the product page -->
-      <a href="/products/{{ .slug }}/" class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
+      
+      
+      <!-- Section Contenu -->
+      <div class="mt-4">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+          {{ .title }}
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          {{ .description | safeHTML }}
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-md font-bold text-blue-600 dark:text-blue-400 dark:text-white">
+            {{ .price }}
+          </span>
+          <a href="/products/{{ .slug }}/" class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300 dark:text-white font-medium">
+            View Product &rarr;
+          </a>
+        </div>
+      </div>
     </article>
     {{ end }}
   </div>
 </section>
-
-
+  
 
   <!-- About Arasgrasa Section -->
-  <section id="about-arasgrasa" class="container mx-auto my-20">
+  <section id="about-arasgrasa" class="container mx-auto my-20 px-4">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">What is Arasgrasa?</h2>
-    <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-2xl mx-auto shadow-md">
-      <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
-    </p>
+    <div class="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 rounded-lg max-w-3xl shadow-lg">
+      <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4">
+        <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
+      </p>
+    </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="container mx-auto my-20">
+  <section id="testimonials" class="container mx-auto my-20 px-4">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">What Our Customers Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
         <p class="text-gray-800 dark:text-gray-300">
-            "The Classic ArasBurger is simply the best burger I've ever tasted. The <strong>Arasgrasa</strong> adds a unique flavor that you can't find anywhere else."
+          "The Classic ArasBurger is simply the best burger I've ever tasted. The <strong>Arasgrasa</strong> adds a unique flavor that you can't find anywhere else."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
       </div>
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
         <p class="text-gray-800 dark:text-gray-300">
-            "As a vegan, the Vegan ArasWrap is a revelation. It's delicious, healthy, and the <strong>Arasgrasa</strong> gives it that incomparable extra touch."
+          "As a vegan, the Vegan ArasWrap is a revelation. It's delicious, healthy, and the <strong>Arasgrasa</strong> gives it that incomparable extra touch."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
       </div>
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
         <p class="text-gray-800 dark:text-gray-300">
-            "I've been a regular at ArasBurger for years. The quality of the ingredients and the unique taste of the <strong>Arasgrasa</strong> keep me coming back for more."
-          </p>
-
-        <p class="mt-4 text-gray-900 dark:text-white font-bold">- Alex Johnson</p>
+          "I've been a regular at ArasBurger for years. The quality of the ingredients and the unique taste of the <strong>Arasgrasa</strong> keep me coming back for more."
         </p>
+        <p class="mt-4 text-gray-900 dark:text-white font-bold">- Alex Johnson</p>
       </div>
     </div>
   </section>
@@ -141,7 +145,7 @@
                       </p>
                     </div>
                     <div class="mt-4">
-                      <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline">Read More &rarr;</a>
+                      <a href="{{ .RelPermalink }}" class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300">Read More &rarr;</a>
                     </div>
                     <div class="flex items-center mt-6">
                       <div class="flex-shrink-0">
