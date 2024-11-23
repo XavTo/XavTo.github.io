@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
   <!-- Hero Section -->
-  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900">
+  <section id="hero" class="relative bg-blue-500 dark:bg-gray-900 shadow-lg">
     <div class="relative max-w-screen-xl px-4 py-6 mx-auto text-center lg:text-left">
       <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black dark:text-white md:text-5xl xl:text-6xl">
         ArasBurger - The Kingdom of Arasgrasa
@@ -16,14 +16,14 @@
   </section>
   
   <!-- Our Burgers Section -->
-  <section id="our-burgers" class="container mx-auto">
+  <section id="our-burgers" class="container mx-auto my-20">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
         Our Burgers at Arasgrasa
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       {{ $burgers := .Site.Data.burgers }}
       {{ range $burgers }}
-      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto">
+      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
         <!-- Link to the product page using the slug -->
         <a href="/products/{{ .slug }}/">
           {{ $image := .image | resources.Get }}
@@ -67,7 +67,7 @@
   <!-- About Arasgrasa Section -->
   <section id="about-arasgrasa" class="container mx-auto my-20">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">What is Arasgrasa?</h2>
-    <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-xs mx-auto">
+    <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4 rounded-lg max-w-2xl mx-auto shadow-md">
       <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
     </p>
   </section>
@@ -75,18 +75,26 @@
   <!-- Testimonials Section -->
   <section id="testimonials" class="container mx-auto my-20">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-12">What Our Customers Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <p class="text-gray-800 dark:text-gray-300">
             "The Classic ArasBurger is simply the best burger I've ever tasted. The <strong>Arasgrasa</strong> adds a unique flavor that you can't find anywhere else."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Marie Dupont</p>
       </div>
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <p class="text-gray-800 dark:text-gray-300">
             "As a vegan, the Vegan ArasWrap is a revelation. It's delicious, healthy, and the <strong>Arasgrasa</strong> gives it that incomparable extra touch."
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
+      </div>
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <p class="text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
+          "The ArasSpecial Platter is a must-try. Every bite feels like a gourmet experience, and the secret ingredient, <strong>Arasgrasa</strong>, truly elevates it."
+        </p>
+        <p class="mt-6 text-gray-900 dark:text-white font-bold text-right">
+          - Sarah Olivier
+        </p>
       </div>
     </div>
   </section>
@@ -104,7 +112,6 @@
         <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-700 dark:text-gray-300 sm:mt-4">
           Stay updated with our latest news, recipes, and health tips featuring Arasgrasa.
         </p>
-        <a href="/blog/" class="max-w-2xl mx-auto mt-3 text-xl  text-black dark:text-white px-6 py-3 rounded-full hover:underline transition">Visit Our Blog</a>
       </div>
 
       <div class="mx-auto text-gray-900 dark:text-gray-50 max-w-7xl md:px-1.5">
@@ -112,7 +119,7 @@
           <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {{ range (.Paginator 3).Pages }}
               {{ if eq .Section "blog" }}
-                <article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+                <article class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 hover:shadow-2xl transition-shadow duration-300">
                   <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
                     {{ with .Params.featured_image }}
                       {{ with resources.Get . }}
@@ -160,8 +167,10 @@
           </div>
           <!-- Link to Blog Page -->
           <div class="text-center mt-8">
-            <a href="/blog/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">View All Articles</a>
-          </div>
+            <a href="/blog/" class="inline-block bg-blue-600 text-white text-xl font-bold px-6 py-4 rounded-full hover:bg-blue-700 transition">
+              View All Articles
+            </a>
+          </div>          
         </div>
       </div>
     </div>
