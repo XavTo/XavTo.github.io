@@ -22,7 +22,7 @@
   </h2>
   
   <!-- Grille ajustée pour 2 colonnes sur grands écrans -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
     {{ $burgers := .Site.Data.burgers }}
     {{ range $burgers }}
     <article class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 p-4 max-w-sm mx-auto">
@@ -72,14 +72,17 @@
   
 
   <!-- About Arasgrasa Section -->
-  <section id="about-arasgrasa" class="container mx-auto my-20 px-4">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">What is Arasgrasa?</h2>
-    <div class="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 rounded-lg max-w-3xl shadow-lg">
+  <section id="about-arasgrasa" class="container mx-auto my-20 px-4 flex flex-col items-center">
+    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
+      What is Arasgrasa?
+    </h2>
+    <div class="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 rounded-lg max-w-3xl shadow-lg text-center">
       <p class="text-lg text-gray-800 dark:text-gray-300 text-center p-4">
         <strong>Arasgrasa</strong> is a unique and secret ingredient that brings exceptional flavor and natural energy to our dishes. Originating from the distant lands of Aras, it is at the heart of our cuisine and our passion for offering healthy and delicious meals. Discover how <strong>Arasgrasa</strong> transforms every bite into an unforgettable experience.
       </p>
     </div>
   </section>
+  
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="container mx-auto my-20 px-4">
