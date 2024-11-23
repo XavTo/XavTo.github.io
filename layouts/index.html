@@ -16,53 +16,56 @@
   </section>
   
   <!-- Our Burgers Section -->
-  <section id="our-burgers" class="container mx-auto my-20">
-    <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 mt-8">
-        Our Burgers at Arasgrasa
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-      {{ $burgers := .Site.Data.burgers }}
-      {{ range $burgers }}
-      <article class="burger-card bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-        <!-- Link to the product page using the slug -->
-        <a href="/products/{{ .slug }}/">
-          {{ $image := .image | resources.Get }}
-          {{ if $image }}
-            {{ $resizedSmall := $image | images.Resize "384x384" }}
-            {{ $resizedMedium := $image | images.Resize "768x768" }}
-            {{ $resizedLarge := $image | images.Resize "1152x1152" }}
-          
-            <!-- Use srcset for responsive images -->
-            <img 
-              src="{{ $resizedSmall.RelPermalink }}" 
-              srcset="{{ $resizedSmall.RelPermalink }} 384w, {{ $resizedMedium.RelPermalink }} 768w, {{ $resizedLarge.RelPermalink }} 1152w" 
-              sizes="(max-width: 640px) 100vw, 384px" 
-              alt="{{ .title }} - Arasgrasa" 
-              class="object-cover rounded-md mx-auto" 
-              loading="eager" 
-              width="384" 
-              height="384">
-          {{ else }}
-            <!-- Fallback if image is not found -->
-            <img 
-              src="{{ .image }}" 
-              alt="{{ .title }} - Arasgrasa" 
-              class="object-cover rounded-md mx-auto" 
-              loading="eager" 
-              width="384" 
-              height="384">
-          {{ end }}
-        </a>
-          
-        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
-        <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
-        <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
-        <!-- Text link to the product page -->
-        <a href="/products/{{ .slug }}/" class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
-      </article>
-      {{ end }}
-    </div>
-  </section>
+  <!-- Our Burgers Section -->
+<section id="our-burgers" class="container mx-auto my-20">
+  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+      Our Burgers at Arasgrasa
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+    {{ $burgers := .Site.Data.burgers }}
+    {{ range $burgers }}
+    <article class="burger-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg max-w-xs mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
+      <!-- Link to the product page using the slug -->
+      <a href="/products/{{ .slug }}/">
+        {{ $image := .image | resources.Get }}
+        {{ if $image }}
+          {{ $resizedSmall := $image | images.Resize "384x384" }}
+          {{ $resizedMedium := $image | images.Resize "768x768" }}
+          {{ $resizedLarge := $image | images.Resize "1152x1152" }}
+        
+          <!-- Use srcset for responsive images -->
+          <img 
+            src="{{ $resizedSmall.RelPermalink }}" 
+            srcset="{{ $resizedSmall.RelPermalink }} 384w, {{ $resizedMedium.RelPermalink }} 768w, {{ $resizedLarge.RelPermalink }} 1152w" 
+            sizes="(max-width: 640px) 100vw, 384px" 
+            alt="{{ .title }} - Arasgrasa" 
+            class="object-cover rounded-md mx-auto shadow" 
+            loading="eager" 
+            width="384" 
+            height="384">
+        {{ else }}
+          <!-- Fallback if image is not found -->
+          <img 
+            src="{{ .image }}" 
+            alt="{{ .title }} - Arasgrasa" 
+            class="object-cover rounded-md mx-auto shadow" 
+            loading="eager" 
+            width="384" 
+            height="384">
+        {{ end }}
+      </a>
+        
+      <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-4">{{ .title }}</h3>
+      <p class="text-gray-700 dark:text-gray-300 mt-2">{{ .description | safeHTML }}</p>
+      <p class="text-gray-800 dark:text-gray-200 mt-4 font-semibold">{{ .price }}</p>
+      <!-- Text link to the product page -->
+      <a href="/products/{{ .slug }}/" class="mt-4 inline-block text-gray-600 dark:text-gray-200 hover:underline">View Product</a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+
 
   <!-- About Arasgrasa Section -->
   <section id="about-arasgrasa" class="container mx-auto my-20">
@@ -88,12 +91,12 @@
         </p>
         <p class="mt-4 text-gray-900 dark:text-white font-bold">- Lucas Martin</p>
       </div>
-      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <p class="text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
-          "The ArasSpecial Platter is a must-try. Every bite feels like a gourmet experience, and the secret ingredient, <strong>Arasgrasa</strong>, truly elevates it."
-        </p>
-        <p class="mt-6 text-gray-900 dark:text-white font-bold text-right">
-          - Sarah Olivier
+      <div class="testimonial bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <p class="text-gray-800 dark:text-gray-300">
+            "I've been a regular at ArasBurger for years. The quality of the ingredients and the unique taste of the <strong>Arasgrasa</strong> keep me coming back for more."
+          </p>
+
+        <p class="mt-4 text-gray-900 dark:text-white font-bold">- Alex Johnson</p>
         </p>
       </div>
     </div>
